@@ -1,3 +1,5 @@
+lấy code này add vào appscript của ggsheet để nhận được đường link tương ứng với form submit của mình 
+
 const sheetName = 'data1'
 const scriptProp = PropertiesService.getScriptProperties()
 
