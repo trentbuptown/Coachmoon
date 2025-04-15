@@ -25,23 +25,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
- 
+
 <body>
-  <header id="header"
-    class="fixed top-0 left-0 w-full z-50 bg-white shadow-md opacity-0 -translate-y-6 transition-all duration-500">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center h-20 relative">
+  <!-- HEADER -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center h-28 relative">
       <a href="/Coachmooon" class="block absolute left-4 top-1/2 -translate-y-1/2">
-        <img src="img/slogan-icon.png" alt="Coachmoon Logo" class="h-24 w-auto object-contain">
+        <img src="img/slogan-icon.png" alt="Coachmoon Logo" class="h-60 w-auto object-contain">
       </a>
-      <nav class=" ml-auto space-x-4 text-blue-900 font-poppins">
-        <a href="#about" class="hover:text-blue-500 ">Giới thiệu</a>
-        <a href="#features" class="hover:text-blue-500">Coach</a>
-        <a href="#footer" class="hover:text-blue-500">Gói sản phẩm</a>
-        <a href="#footer" class="hover:text-blue-500">Đối tượng tham gia</a>
-        <a href="#submitform" class="hover:text-blue-500 font-semibold">Đăng ký ngay</a>
+      <nav class="ml-auto space-x-4 text-blue-900 font-poppins">
+        <a href="#contents" class="hover:text-blue-500">Giới thiệu</a>
+        <a href="#about" class="hover:text-blue-500">Câu chuyện của tôi</a>
+        <a href="#features" class="hover:text-blue-500">Dịch vụ khai vấn</a>
+        <a href="#subjects" class="hover:text-blue-500">Đối tượng tham gia</a>
+        <a href="#submitform" class="hover:text-blue-500 ">Đăng ký</a>
+        <a href="#submitform" class="hover:text-blue-500 ">Đặt lịch</a>
       </nav>
     </div>
   </header>
+
+  <section class="w-full pt-28 min-h-screen bg-gradient-to-br from-pink-100 via-white to-white py-6">
+    <div class="max-w-7xl mx-auto px-4 space-y-10 flex flex-col justify-start">
+
+      <div>
+        <a href="#submitform">
+          <img src="img/BANNER.png" alt="Banner" class="w-full h-auto rounded-xl shadow-md">
+        </a>
+      </div>
+
+      <div id="contents" class="text-center">
+        <h1 class="text-4xl text-red-600 font-extrabold mb-10 uppercase tracking-wider font-serif">
+          CÓ PHẢI BẠN ĐANG...
+        </h1>
+        <div class="text-2xl space-y-4 text-left bg-white p-10 rounded-3xl shadow-2xl border-l-[10px] border-pink-500">
+          <p><span class="font-bold ">Cảm thấy lạc lõng</span> trong sự nghiệp và cuộc sống, không rõ bước tiếp theo là
+            gì?</p>
+          <p><span class="font-bold ">Mong muốn làm lại từ đầu,</span> nhưng vẫn không hiểu rõ mình thực sự muốn gì và
+            cần gì?</p>
+          <p><span class="font-bold ">Đã từng là một người phụ nữ thành đạt,</span> nhưng giờ đây bạn không còn cảm thấy
+            hạnh phúc và thoả mãn như trước?</p>
+          <p><span class="font-bold ">Sẵn sàng thay đổi,</span> nhưng bạn chưa tìm ra con đường cụ thể để hành động mạnh
+            mẽ và tự tin hơn?</p>
+          <p><span class="font-bold ">Lo lắng về tương lai con cái,</span> và không hiểu tại sao con bạn lại có những
+            hành vi khó hiểu, dễ xúc động hay phản ứng mạnh mẽ?</p>
+          <p><span class="font-bold ">Quan tâm đến sự phát triển của con,</span> năng lực bẩm sinh, tư duy não bộ, phong
+            cách học và tương tác xã hội của con cái.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <div class="fixed bottom-6 right-6 z-50 space-y-3">
     <a href="https://m.me/yourusername" target="_blank"
@@ -50,74 +83,73 @@
     </a>
     <a href="https://zalo.me/84903885044" target="_blank"
       class="block w-14 h-14 bg-white-600 rounded-full shadow-lg hover:scale-110 transition transform duration-300 flex items-center justify-center">
-      <img src="img/icon/zalo.png" alt="Zalo" class="w-7 h-7" >
+      <img src="img/icon/zalo.png" alt="Zalo" class="w-7 h-7">
 
     </a>
   </div>
 
-  <section class="w-full relative">
-    <a href="#submitform" ><img src="img/Banner 1450 x 750.png" alt="Banner" class="w-full h-auto block"></a>
-    
 
-  </section>
-
-  <!-- Nội dung -->
-  <section id="contents" class="py-20 bg-gradient-to-br from-pink-100 via-white to-white">
-    <div class="max-w-5xl mx-auto text-center px-4">
-      <h1 class="text-4xl text-pink-600 font-extrabold mb-10 uppercase tracking-wider font-serif">CÓ PHẢI BẠN ĐANG...
-      </h1>
-      <div class="text-2xl space-y-4 text-left bg-white p-10 rounded-3xl shadow-2xl border-l-[10px] border-pink-500">
-        <p><span class="font-bold text-red-600">Cảm thấy lạc lõng</span> trong sự nghiệp và cuộc sống, không rõ bước
-          tiếp theo là gì?</p>
-        <p><span class="font-bold text-red-600">Mong muốn làm lại từ đầu,</span> nhưng vẫn không hiểu rõ mình thực sự
-          muốn gì và cần gì?</p>
-        <p><span class="font-bold text-red-600">Đã từng là một người phụ nữ thành đạt,</span> nhưng giờ đây bạn không
-          còn cảm thấy hạnh phúc và thoả mãn như trước?</p>
-        <p><span class="font-bold text-red-600">Sẵn sàng thay đổi,</span> nhưng bạn chưa tìm ra con đường cụ thể để hành
-          động mạnh mẽ và tự tin hơn?</p>
-        <p><span class="font-bold text-red-600">Lo lắng về tương lai con cái,</span> và không hiểu tại sao con bạn lại
-          có những hành vi khó hiểu, dễ xúc động hay phản ứng mạnh mẽ?</p>
-        <p><span class="font-bold text-red-600">Quan tâm đến sự phát triển của con,</span> năng lực bẩm sinh, tư duy não
-          bộ, phong cách học và tương tác xã hội của con cái.</p>
-      </div>
-    </div>
-  </section>
   <!-- Giới thiệu -->
-  <section id="about" class="bg-pink-500 text-white">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="font-sans">
-        <p class="text-white-600 text-xl">
-        <p class="text-3xl font-serif">Tôi là... </p>
-        <p class="text-3xl font-serif">COACH MOON PHAM</p>
-        <p class="text-xl"> Một người đang sống thật – và đồng hành cùng những người phụ nữ đủ dũng cảm để sống rực rỡ
-          từ bản thể.
-          Tôi không hoàn hảo.
-          Tôi vẫn đang trên hành trình.
-          Nhưng tôi đã đi qua nỗi mỏi mệt mà bạn đang mang.
-          Từng là nữ lãnh đạo cấp cao trong ngành Marketing hơn 20 năm, tôi làm việc tại các tập đoàn lớn – cả Việt Nam
-          và đa quốc gia.
-          Thành công ngoài mặt. Kiệt sức bên trong.
-          Tôi nhận ra có rất nhiều phụ nữ giống tôi:
-          Giỏi giang. Độc lập. Nhưng hoang mang, cô đơn. Và ngày càng xa rời chính mình.
-          Nếu bạn đang tìm một người không dạy bạn sống – mà cùng bạn tìm lại chính mình,
-          Tôi ở đây, sẵn sàng đi cùng bạn.
-          With love 🩵</p>
-        <p>Chữ ký handwriting</p>
-        </p>
+  <section id="about" class="bg-pink-500 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- Hình ảnh -->
+        <div class="flex justify-center">
+          <img src="img/bbb.JPEG" class="max-h-[1000px] w-full object-contain">
+        </div>
+        <div class="font-sans">
+          <p class="text-white-600 text-xl">
+          <p class="text-3xl font-serif"><strong>Tôi là...</strong></p>
+          <p class="text-3xl font-serif"><strong>COACH MOON PHAM</strong></p>
+          <p class="text-xl">
+            Một người đang sống thật – và đồng hành cùng những người phụ nữ <strong>đủ dũng cảm để sống rực rỡ từ bản
+              thể.</strong>
+            <br>
+            Tôi không hoàn hảo.
+            <br>
+            Tôi vẫn đang trên hành trình.
+            <br>
+            Nhưng tôi đã <strong>đi qua nỗi mỏi mệt mà bạn đang mang.</strong>
+            <br>
+            <strong>Từng là nữ lãnh đạo cấp cao</strong> trong ngành Marketing hơn 20 năm, tôi làm việc tại các tập đoàn
+            lớn – cả Việt Nam và đa quốc gia.
+            <br>
+            <strong>Thành công ngoài mặt. Kiệt sức bên trong.</strong>
+            <br>
+            Tôi nhận ra có rất nhiều phụ nữ giống tôi:
+            <br>
+            <strong>Giỏi giang. Độc lập. Nhưng hoang mang, cô đơn. Và ngày càng xa rời chính mình.</strong>
+            <br>
+            Nếu bạn đang tìm một người <strong>không dạy bạn sống – mà cùng bạn tìm lại chính mình,</strong>
+            <br>
+            Tôi ở đây, sẵn sàng đi cùng bạn.
+            <br>
+            With love 🩵
+          </p>
+          <img src="img/sign.png" class="w-auto h-[200px]">
+          </p>
+        </div>
       </div>
-      <div class="flex justify-center">
-        <img src="img/aaa.png" class="max-h-[500px] w-auti">
-      </div>
-    </div>
   </section>
+
+
+
+
   <!-- Video gỉang dạy -->
   <section id="contents" class="py-20 bg-white ">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-semibold text-center mb-12 ">
-        Phía Sau Một Master Marketing - Sống & Làm Chủ Cuộc Đời
+        My story: Sống rực rỡ từ bản thể
       </h3>
+      <div style="display: flex; justify-content: center;">
+        <iframe src="https://drive.google.com/file/d/10ZQ8rKALWy5KJlUnHUOi-e_pT-3EXetI/preview" width="640" height="360"
+          allow="autoplay" allowfullscreen>
+        </iframe>
+      </div>
 
-      <div class="relative">
+
+      <div class="relative py-6">
         <button id="prevBtn"
           class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
           ◀
@@ -184,14 +216,14 @@
             class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
             <img src="img/coach_header_img/15.JPG" class="w-full h-[250px] object-cover" />
           </div>
-          <div
+          <!-- <div
             class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
             <img src="img/coach_header_img/16.JPG" class="w-full h-[250px] object-cover" />
           </div>
           <div
             class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
             <img src="img/coach_header_img/17.JPG" class="w-full h-[250px] object-cover" />
-          </div>
+          </div> -->
           <div
             class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
             <img src="img/coach_header_img/18.JPG" class="w-full h-[250px] object-cover" />
@@ -209,46 +241,11 @@
       </div>
     </div>
   </section>
-  <!-- Các khoá coaching khác -->
-  <section id="features" class="py-20 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-center mb-12">Các khóa Coaching khác</h3>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow flex flex-col justify-between">
-          <img>
-          <button class="mt-auto w-full py-4 text-white font-semibold rounded bg-pink-500 hover:bg-pink-600 transition">
-            Xem chi tiết
-          </button>
-        </div>
 
-        <div class="bg-white p-6 rounded-lg shadow flex flex-col justify-between">
-          <img>
-          <button class="mt-auto w-full py-4 text-white font-semibold rounded bg-pink-500 hover:bg-pink-600 transition">
-            Xem chi tiết
-          </button>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow flex flex-col justify-between">
-          <img>
-          <button class="mt-auto w-full py-4 text-white font-semibold rounded bg-pink-500 hover:bg-pink-600 transition">
-            Xem chi tiết
-          </button>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow flex flex-col justify-between">
-          <img>
-          <button class="mt-auto w-full py-4 text-white font-semibold rounded bg-pink-500 hover:bg-pink-600 transition">
-            Xem chi tiết
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold text-center mb-12">Các công cụ hỗ trợ trong chương trình</h2>
+      <h2 class="text-3xl font-semibold text-center mb-12">Tìm hiểu 3 công cụ chuyên sâu</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
           <img src="img/img_tools/2.jpg" alt="Sinh trắc học vân tay" class="w-full h-48 object-cover rounded-t-lg mb-4">
@@ -264,7 +261,7 @@
             tính cách thông qua 4 phong cách: Chi phối, Ảnh hưởng, Kiên định và Tận tâm.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-          <img src="img/img_tools/Motivators.png" alt="Công cụ Motivators"
+          <img src="img/img_tools/Motivators.jpg" alt="Công cụ Motivators"
             class="w-full h-48 object-cover rounded-t-lg mb-4">
           <h3 class="text-xl font-semibold mb-2">Công Cụ Motivators</h3>
           <p class="text-gray-700">Motivators đo lường các yếu tố thúc đẩy hành vi của một cá nhân, tập trung vào 7 khía
@@ -275,139 +272,494 @@
   </section>
   <!-- Đăng ký-->
   <!-- cần thay đường link appscript của gg sheet của khách hàng -->
-  <section id="submitform" class="py-20 bg-white py-20 bg-gradient-to-br from-pink-100 via-white to-white">
+  <section id="submitform" class="py-20 bg-white bg-gradient-to-br from-pink-100 via-white to-white">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-center mb-12">Đăng ký tham dự</h3>
+      <h3 class="text-3xl font-semibold text-center mb-12 text-gray-800">Đặt lịch tư vấn miễn phí 30 phút cùng Coach
+        Moon</h3>
 
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div class="space-y-6">
-          <h4 class="text-2xl font-bold text-gray-800">Thấu hiểu bản thận định vị sự nghiệp</h4>
-          <p class="text-gray-600">
-            Coach Moon khai vấn tận tâm, tử tế
-          </p>
-          <ul class="list-disc list-inside text-gray-600">
-            <li>Một hành trình tham vấn 1:1 với coach Moon, để bạn sống và làm việc rực rỡ từ bản thể</li>
-            <li>"Sống rực rõ không bắt đầu bằng thay đổi bên ngoài, mà từ việc hiểu mình là ai."</li>
-          </ul>
+          <p><strong>Một hành trình khai mở để bạn sống và làm việc rực rỡ từ chính bản thể của mình.</strong></p>
+          <p>"Sống rực rỡ không bắt đầu bằng thay đổi bên ngoài, mà từ việc hiểu mình là ai."</p>
+          <p></p>Trong buổi tư vấn cá nhân 30 phút cùng Coach Moon – Nhà khai vấn quốc tế với hơn 22 năm kinh nghiệm
+          phát triển con người – bạn sẽ:
+          <p></p>✔️ Được lắng nghe và thấu hiểu từ góc nhìn khách quan
+          <p></p>✔️ Nhìn rõ hơn những điều đang cản trở bạn tiến lên
+          <p></p>✔️ Nhận định hướng hoặc đề xuất bước đi phù hợp với mục tiêu hiện tại
+          <p> Giá trị buổi tư vấn: 3.000.000đ
+          <p>Hiện đang được tư vấn miễn phí trong lần đầu tiên bạn ghé thăm website – chỉ dành cho những ai sẵn sàng bắt
+            đầu hành trình thay đổi.
+          <p>Coach Moon sẽ đồng hành cùng bạn bằng sự tận tâm và tử tế, tạo nên một không gian đủ an toàn để bạn lắng
+            nghe bản thân rõ hơn.
+          <p>👉 Đăng ký ngay hôm nay để giữ chỗ và bắt đầu hành trình trở về với chính mình.
         </div>
-        <form method="post" id="contactForm" class="bg-gray-100 p-8 rounded-lg shadow space-y-6"
+
+        <!-- Form -->
+        <form method="post" id="contactForm"
+          class="bg-gradient-to-br from-purple-100 via-pink-100 to-white p-8 rounded-lg shadow-lg space-y-6"
           action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
-          <input name="name" id="name" type="text" placeholder="Họ và tên" required
-            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input name="email" id="email" type="email" placeholder="Email" required
-            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
-            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input name="your-job" id="your-job" placeholder="Công việc hiện tại" rows="4"
-            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input name="your-coach" id="your-coach" placeholder="Khóa học quan tâm" rows="4"
-            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition"
-            value="submit" id="submit">Gửi thông tin</button>
+
+          <!-- Họ và tên -->
+          <div class="relative">
+            <input name="name" id="name" type="text" placeholder="Họ và tên" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Email -->
+          <div class="relative">
+            <input name="email" id="email" type="email" placeholder="Email" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Số điện thoại -->
+          <div class="relative">
+            <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Công việc hiện tại -->
+          <div class="relative">
+            <input name="your-job" id="your-job" placeholder="Công việc hiện tại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Dịch vụ bạn quan tâm -->
+          <div class="relative">
+            <input name="your-coach" id="your-coach" placeholder="Dịch vụ bạn quan tâm" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Nút submit -->
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-pink-700 transition duration-300">
+            Đặt lịch
+          </button>
         </form>
-        <script src="ggsheet.js"></script>
       </div>
     </div>
   </section>
-  <!-- Lộ trình -->
-  <section>
-    <h1>LỘ TRÌNH 6 BƯỚC CHÚNG TA SẼ ĐỒNG HÀNH CÙNG NHAU TRONG CHƯƠNG TRÌNH</h1>
-  </section>
-
 
   <section class="py-20 bg-pink-300">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold text-center mb-12 font-serif">Cảm Nhận Của Khách Hàng</h2>
+      <h2 class="text-3xl font-semibold text-center mb-12">Cảm nhận của khách hàng sau khi được khai vấn</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-          <div class="flex flex-col items-center text-center ">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 items-start">
+
+        <div
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition flex flex-col justify-between min-h-[560px]">
+          <div class="flex flex-col items-center text-center flex-grow">
             <img src="img/avatar_customers/VivianPham.png" alt="Avatar khách hàng"
               class="w-24 h-24 rounded-full mb-4 object-cover shadow">
             <h4 class="font-bold text-lg mb-2">CHỊ VIVIAN PHAM</h4>
-            <h5 class="font-bold mb-5">GIÁM ĐỐC MARKETING</h5>
-            <p class="text-gray-700 italic">Làm việc với Coach Moon khiến mình nhận ra rằng: thành công không nhất thiết
-              phải đánh đổi hạnh phúc.
-              Thông qua hành trình “Thấu hiểu bản thân”, mình học được cách lắng nghe chính mình, hiểu rõ hơn về giá trị
-              cá nhân và điều gì thực sự quan trọng. Chị không chỉ coach, mà còn truyền cảm hứng để mình thay đổi từ bên
-              trong.
-              Nếu bạn là một người phụ nữ đang trên hành trình thành công, nhưng đôi khi thấy “mình đang đánh rơi chính
-              mình” – hãy cho bản thân cơ hội gặp chị Moon. Nó có thể là bước ngoặt rất quan trọng trong cuộc đời bạn.”
+            <h5 class="font-bold mb-5">Giám đốc Marketing</h5>
+            <div class="mb-2 text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+            <p class="text-gray-700 italic">
+              <span class="short-text block">
+                Làm việc với Coach Moon khiến mình nhận ra rằng: thành công không nhất thiết phải...
+              </span>
+              <span class="full-text hidden">
+                Làm việc với Coach Moon khiến mình nhận ra rằng: thành công không nhất thiết phải đánh đổi hạnh phúc.
+                Thông qua hành trình “Thấu hiểu bản thân”, mình học được cách lắng nghe chính mình, hiểu rõ hơn về giá
+                trị
+                cá nhân và điều gì thực sự quan trọng. Chị không chỉ coach, mà còn truyền cảm hứng để mình thay đổi từ
+                bên
+                trong.
+                Nếu bạn là một người phụ nữ đang trên hành trình thành công, nhưng đôi khi thấy “mình đang đánh rơi
+                chính
+                mình” – hãy cho bản thân cơ hội gặp chị Moon. Nó có thể là bước ngoặt rất quan trọng trong cuộc đời bạn.
+              </span>
             </p>
+          </div>
+          <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
+            thêm</button>
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            Xem cảm nhận
+          </button>
+          <div id="videoModal" class="video-modal">
+            <div class="close-btn" onclick="closeVideoModal()">✖</div>
+            <iframe id="modalIframe" allowfullscreen allow="fullscreen"></iframe>
           </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-          <div class="flex flex-col items-center text-center">
+
+        <div
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition flex flex-col justify-between min-h-[560px]">
+          <div class="flex flex-col items-center text-center flex-grow">
             <img src="img/avatar_customers/LeeParis.jpg" alt="Avatar khách hàng"
               class="w-24 h-24 rounded-full mb-4 object-cover shadow">
             <h4 class="font-bold text-lg mb-2">ANH LEE PARIS</h4>
-            <h5 class="font-bold mb-5">CEO JL IMMIGRATION, AUSTRALIA</h5>
-            <p class="text-gray-700 italic">Chủng vân tay của mình thuộc dạng hiếm, nên không phải ai cũng có thể giải
-              mã chính xác. Vậy mà chị phân tích chính xác hơn 95% điểm mạnh, điểm yếu, tiềm năng, và cả con đường phía
-              trước. Nhưng điều khiến mình không bao giờ quên là khi chị mỉm cười và nói:
-              “Em cứ yên tâm, dấu vân tay của em cho thấy sau này em có thể trở thành CEO, thậm chí là Chủ tịch HĐQT…”
-              Lúc đó, mình nghe mà nửa tin nửa ngờ. Nhưng hôm nay, sau hơn một thập kỷ, mình đang sống đúng với điều chị
-              từng thấy: mình là CEO của chính công ty mình thành lập tại Úc.
-              Và đến tận bây giờ, mình vẫn luôn biết ơn chị – như một người đã khai mở tiềm năng và thắp sáng lại niềm
-              tin nơi mình.
+            <h5 class="font-bold mb-5">CEO JL Immigration, Australia</h5>
+            <div class="mb-2 text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+            <p class="text-gray-700 italic">
+              <span class="short-text block">
+                Chủng vân tay của mình thuộc dạng hiếm, nên không phải ai cũng có thể giải mã chính xác...
+              </span>
+              <span class="full-text hidden">
+                Chủng vân tay của mình thuộc dạng hiếm, nên không phải ai cũng có thể giải mã chính xác. Vậy mà chị phân
+                tích chính xác hơn 95% điểm mạnh, điểm yếu, tiềm năng, và cả con đường phía trước. Nhưng điều khiến mình
+                không bao giờ quên là khi chị mỉm cười và nói:
+                “Em cứ yên tâm, dấu vân tay của em cho thấy sau này em có thể trở thành CEO, thậm chí là Chủ tịch HĐQT…”
+                Lúc đó, mình nghe mà nửa tin nửa ngờ. Nhưng hôm nay, sau hơn một thập kỷ, mình đang sống đúng với điều
+                chị từng thấy: mình là CEO của chính công ty mình thành lập tại Úc.
+                Và đến tận bây giờ, mình vẫn luôn biết ơn chị – như một người đã khai mở tiềm năng và thắp sáng lại niềm
+                tin nơi mình.
+              </span>
             </p>
+          </div>
+          <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
+            thêm</button>
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            Xem cảm nhận
+          </button>
+          <div id="videoModal" class="video-modal">
+            <div class="close-btn" onclick="closeVideoModal()">✖</div>
+            <iframe id="modalIframe" allowfullscreen allow="fullscreen"></iframe>
           </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-          <div class="flex flex-col items-center text-center">
+        <div
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition flex flex-col justify-between min-h-[560px]">
+          <div class="flex flex-col items-center text-center flex-grow">
             <img src="img/avatar_customers/NgocThuy.jpg" alt="Avatar khách hàng"
               class="w-24 h-24 rounded-full mb-4 object-cover shadow">
             <h4 class="font-bold text-lg mb-2">CHỊ NGỌC THỦY</h4>
-            <h5 class="font-bold mb-5">PHỤ HUYNH HỌC SINH DU HỌC MỸ</h5>
-            <p class="text-gray-700 italic">Là một người mẹ, mình luôn trăn trở rất nhiều về việc định hướng tương lai
-              phù hợp cho con, nhất là khi mỗi bạn đều có những điểm mạnh và tài năng riêng, không đi theo “lối mòn”
-              thông thường.
-              Mình đặc biệt ấn tượng khi chị giúp mình nhận ra rằng: việc chọn ngành không chỉ dựa trên điểm số hay xu
-              hướng, mà cần thực sự phù hợp với bản chất, năng lực và “sợi chỉ đỏ” trong con người mỗi bạn.
-              Nhờ chị Moon, cả gia đình mình cảm thấy vững vàng và rõ ràng hơn rất nhiều trong hành trình phía trước.
+            <h5 class="font-bold mb-5">Phụ huynh học sinh du học Mỹ</h5>
+            <div class="mb-2 text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+            <p class="text-gray-700 italic">
+              <span class="short-text block">
+                Là một người mẹ, mình luôn trăn trở rất nhiều về việc định hướng tương lai phù hợp cho con...
+              </span>
+              <span class="full-text hidden">
+                Là một người mẹ, mình luôn trăn trở rất nhiều về việc định hướng tương lai phù hợp cho con, nhất là khi
+                mỗi bạn đều có những điểm mạnh và tài năng riêng, không đi theo “lối mòn” thông thường.
+                Mình đặc biệt ấn tượng khi chị giúp mình nhận ra rằng: việc chọn ngành không chỉ dựa trên điểm số hay xu
+                hướng, mà cần thực sự phù hợp với bản chất, năng lực và “sợi chỉ đỏ” trong con người mỗi bạn.
+                Nhờ chị Moon, cả gia đình mình cảm thấy vững vàng và rõ ràng hơn rất nhiều trong hành trình phía trước.
+              </span>
             </p>
+          </div>
+          <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
+            thêm</button>
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            Xem cảm nhận
+          </button>
+          <div id="videoModal" class="video-modal">
+            <div class="close-btn" onclick="closeVideoModal()">✖</div>
+            <iframe id="modalIframe" allowfullscreen allow="fullscreen"></iframe>
           </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
-          <div class="flex flex-col items-center text-center">
+        <div
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition flex flex-col justify-between min-h-[560px]">
+          <div class="flex flex-col items-center text-center flex-grow">
             <img src="img/avatar_customers/NguyenThuyHang.jpg" alt="Avatar khách hàng"
               class="w-24 h-24 rounded-full mb-4 object-cover shadow">
             <h4 class="font-bold text-lg mb-2">CHỊ NGUYỄN THÚY HẰNG</h4>
-            <h5 class="font-bold mb-5">MÔI GIỚI CHỨNG KHOÁN</h5>
-            <p class="text-gray-700 italic">Mình đã từng làm rất nhiều bài test để hiểu mình – từ MBTI, DISC, cho tới cả
-              sinh trắc học… nhưng mọi thứ cứ lửng lơ, không rõ ràng, và thật sự... vô nghĩa.
-              Cho tới khi gặp chị Minh Nguyệt - chị giống như một tấm gương soi nội tâm – giúp mình hiểu rõ TÍNH CÁCH
-              của chính mình, biết được ĐỘNG LỰC cốt lõi đang điều khiển hành vi và lựa chọn sự nghiệp.
-              Mình cảm thấy lần đầu tiên mình được kết nối thật sự với chính mình – không còn mơ hồ hay tự nghi ngờ nữa.
+            <h5 class="font-bold mb-5">Môi giới chứng khoáng</h5>
+            <div class="mb-2 text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+            <p class="text-gray-700 italic">
+              <span class="short-text block">
+                Mình đã từng làm rất nhiều bài test để hiểu mình – từ MBTI, DISC, cho tới cả sinh trắc học...
+              </span>
+              <span class="full-text hidden">
+                Mình đã từng làm rất nhiều bài test để hiểu mình – từ MBTI, DISC, cho tới cả sinh trắc học… nhưng mọi
+                thứ cứ lửng lơ, không rõ ràng, và thật sự... vô nghĩa.
+                Cho tới khi gặp chị Minh Nguyệt - chị giống như một tấm gương soi nội tâm – giúp mình hiểu rõ TÍNH CÁCH
+                của chính mình, biết được ĐỘNG LỰC cốt lõi đang điều khiển hành vi và lựa chọn sự nghiệp.
+                Mình cảm thấy lần đầu tiên mình được kết nối thật sự với chính mình – không còn mơ hồ hay tự nghi ngờ
+                nữa.
+              </span>
             </p>
           </div>
-        </div>
-      </div>
-      <div class="text-center py-12">
-        <button id="openVideoBtn"
-          class="bg-pink-600 text-white px-6 py-3 rounded-lg shadow hover:bg-pink-700 transition">
-          Xem video
-        </button>
-      </div>
-      <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
-        <div class="relative w-[90%] max-w-4xl">
-          <button id="closeVideoBtn" class="absolute -top-5 -right-5 text-white text-3xl font-bold hover:text-pink-400">
-            &times;
+          <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
+            thêm</button>
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            Xem cảm nhận
           </button>
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe src="https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/view?usp=sharing"
-              width="100%" height="480" allow="autoplay" allowfullscreen class="w-full h-full rounded-lg shadow-xl">
-            </iframe>
+          <div id="videoModal" class="video-modal">
+            <div class="close-btn" onclick="closeVideoModal()">✖</div>
+            <iframe id="modalIframe" allowfullscreen allow="fullscreen"></iframe>
           </div>
         </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition flex flex-col justify-between min-h-[560px]">
+          <div class="flex flex-col items-center text-center flex-grow">
+            <img src="img/avatar_customers/NgocThuy.jpg" alt="Avatar khách hàng"
+              class="w-24 h-24 rounded-full mb-4 object-cover shadow">
+            <h4 class="font-bold text-lg mb-2">CHỊ ĐẶNG QUÝ</h4>
+            <h5 class="font-bold mb-5">Sales bất động sản</h5>
+            <div class="mb-2 text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+            <p class="text-gray-700 italic">
+              <span class="short-text block">
+                Lần thứ hai gặp mặt chị Nguyệt với vai trò là người khai vấn (coach), chị đã “đả thông”...
+              </span>
+              <span class="full-text hidden">
+                Lần thứ hai gặp mặt chị Nguyệt với vai trò là người khai vấn (coach), chị đã “đả thông” một số vấn đề
+                hoặc một số khái niệm mình hiểu chưa đúng lắm. Nhờ chị mà mình sẽ biết phải làm gì để kích hoạt động lực
+                bên trong của mình cũng như cải thiện tính cách mình cần cư xử với môi trường và con người xung quanh.
+                Buổi coaching thật sự rất tận tâm, chu đáo, rất có ích dành cho những ai đang hoang mang, lo lắng, hoặc
+                bơ vơ giữa cuộc sống bộn bề lo toan này thì hãy thử trải nghiệm tham gia bài test và cùng coaching với
+                chị Nguyệt.
+              </span>
+            </p>
+          </div>
+          <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
+            thêm</button>
+
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            Xem cảm nhận
+          </button>
+
+          <div id="videoModal" class="video-modal">
+            <div class="close-btn" onclick="closeVideoModal()">✖</div>
+            <iframe id="modalIframe" allowfullscreen allow="fullscreen"></iframe>
+          </div>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition flex flex-col justify-between min-h-[560px]">
+          <div class="flex flex-col items-center text-center flex-grow">
+            <img src="img/avatar_customers/NgocThuy.jpg" alt="Avatar khách hàng"
+              class="w-24 h-24 rounded-full mb-4 object-cover shadow">
+            <h4 class="font-bold text-lg mb-2">CHỊ NGUYỄN THANH NHÀN</h4>
+            <h5 class="font-bold mb-5">Giáo viên</h5>
+            <div class="mb-2 text-yellow-400">⭐️⭐️⭐️⭐️⭐️</div>
+            <p class="text-gray-700 italic">
+              <span class="short-text block">
+                10 năm trước dạy con cô ấy
+                10 năm sau xách giỏ đi học cô ấy và nhận lại được...
+              </span>
+              <span class="full-text hidden">
+                10 năm trước dạy con cô ấy
+                10 năm sau xách giỏ đi học cô ấy và nhận lại được thật nhiều giá trị. Cô ấy 10 điểm, từng ấy năm trôi
+                qua, cô ấy vẫn trẻ trung, năng lượng và xuất sắc trong mọi công việc cô ấy làm. Cô ấy am hiểu vô cùng
+                sâu sắc trong rất nhiều lĩnh vực.
+                Em cảm ơn chị Minh Nguyệt vì buổi Coach hơn cả tuyệt vời! Thương chúc chị nhiều sức khỏe, nhiều năng
+                lượng để mang đến những giá trị tốt đẹp đến với khách hàng trên hành trình Business Coach.
+              </span>
+            </p>
+          </div>
+          <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
+            thêm</button>
+
+          <style>
+            .video-modal {
+              display: none;
+              position: fixed;
+              z-index: 9999;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background: rgba(0, 0, 0, 0.8);
+              justify-content: center;
+              align-items: center;
+            }
+
+            .video-modal iframe {
+              width: 80vw;
+              height: 45vw;
+              max-width: 960px;
+              max-height: 540px;
+              border: none;
+              border-radius: 10px;
+            }
+
+            .video-modal .close-btn {
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              font-size: 30px;
+              color: white;
+              cursor: pointer;
+            }
+          </style>
+
+          <!-- Nút -->
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            Xem cảm nhận
+          </button>
+
+          <!-- Modal Video -->
+          <div id="videoModal" class="video-modal">
+            <div class="close-btn" onclick="closeVideoModal()">✖</div>
+            <iframe id="modalIframe" allowfullscreen allow="fullscreen"></iframe>
+          </div>
+
+        </div>
       </div>
-    </div>
   </section>
 
-  <section class="py-20 bg-gradient-to-br from-pink-100 via-white to-white">
+
+  <section id="contents" class="py-20 bg-white ">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold text-center mb-12 ">
+        Các dịch vụ khai vấn
+      </h3>
+      <div class="relative py-6">
+        <button id="prevBtnProducts"
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
+          ◀
+        </button>
+
+        <div id="sliderProducts" class="flex overflow-x-auto no-scrollbar space-x-6 scroll-smooth">
+          <div
+            class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/banner dichvu/1.jpg" class="w-full h-[250px] object-cover" />
+                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  9.900.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg">Bản đồ cuộc đời</h4>
+              <p class="text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">
+                  Đăng ký ngay
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/173H4a0sdhVhfaqoQ9UZWgbKKsgILgTfT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <img src="img/banner dichvu/2.jpg" class="w-full h-[250px] object-cover" />
+                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  6.000.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg">La bàn sự nghiệp</h4>
+              <p class="text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
+              <div class="mt-3">
+                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1PvictYiOTgDO0zNbfTKyBgCHhLbA60-w/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <img src="img/banner dichvu/3.jpg" class="w-full h-[250px] object-cover" />
+                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  9.900.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg">Hiểu con từ gốc</h4>
+              <p class="text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
+              <div class="mt-3">
+                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/ghi789/view" target="_blank" rel="noopener noreferrer">
+                <img src="img/default.jpg" class="w-full h-[250px] object-cover" />
+                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  1.800.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg">Khóa học D</h4>
+              <p class="text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
+              <div class="mt-3">
+                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/ghi789/view" target="_blank" rel="noopener noreferrer">
+                <img src="img/default.jpg" class="w-full h-[250px] object-cover" />
+                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  1.800.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg">Khóa học D</h4>
+              <p class="text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
+              <div class="mt-3">
+                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/ghi789/view" target="_blank" rel="noopener noreferrer">
+                <img src="img/default.jpg" class="w-full h-[250px] object-cover" />
+                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  1.800.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg">Khóa học D</h4>
+              <p class="text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
+              <div class="mt-3">
+                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  ngay</button>
+              </div>
+            </div>
+          </div>
+
+
+          <button id="nextBtnProducts"
+            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
+            ▶
+          </button>
+  </section>
+
+
+  <section id="subjects" class="py-20 bg-gradient-to-br from-pink-100 via-white to-white">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <!-- Tiêu đề -->
       <h2 class="text-3xl font-bold mb-6">Dành cho những người đang ở ngã ba cuộc đời...</h2>
@@ -416,7 +768,6 @@
         <strong>sống đúng – sống sâu – sống tự do</strong>.
       </p>
 
-      <!-- Danh sách người phù hợp -->
       <div class="space-y-6 text-left">
         <div class="flex items-start gap-4">
           <div class="text-pink-500 text-xl">➤</div>
@@ -455,35 +806,12 @@
               trước.”</em></p>
         </div>
       </div>
-
-      <!-- Phần kết -->
-      <div class="mt-12 text-center">
-        <p class="text-xl font-semibold text-gray-800">Coach Moon Phạm ở đây – và hành trình này là dành cho bạn.</p>
-      </div>
     </div>
   </section>
-
-
-
 
   <footer id="footer" class="bg-gray-800 text-white py-10 text-center">
     <p>&copy; Coachmoon</p>
   </footer>
-
-  <!-- script của header, hình ảnh và video cảm nhận-->
-  <script>
-    const header = document.getElementById('header');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.remove('opacity-0', '-translate-y-6');
-        header.classList.add('opacity-100', 'translate-y-0');
-      } else {
-        header.classList.remove('opacity-100', 'translate-y-0');
-        header.classList.add('opacity-0', '-translate-y-6');
-      }
-    });
-  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -547,6 +875,40 @@
       iframe.src = src; // reset lại video
     });
   </script>
+
+  <script>
+    function toggleText(btn) {
+      const card = btn.closest('.flex-col');
+      const shortText = card.querySelector('.short-text');
+      const fullText = card.querySelector('.full-text');
+
+      const isHidden = fullText.classList.contains('hidden');
+      if (isHidden) {
+        shortText.classList.add('hidden');
+        fullText.classList.remove('hidden');
+        btn.textContent = 'Thu gọn';
+      } else {
+        shortText.classList.remove('hidden');
+        fullText.classList.add('hidden');
+        btn.textContent = 'Đọc thêm';
+      }
+    }
+  </script>
+  <!-- slider products -->
+  <script>
+    const slider = document.getElementById('sliderProducts');
+    const prev = document.getElementById('prevBtnProducts');
+    const next = document.getElementById('nextBtnProducts');
+
+    prev.addEventListener('click', () => {
+      slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    next.addEventListener('click', () => {
+      slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  </script>
+
 </body>
 
 </html>
