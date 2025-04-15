@@ -6,6 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoachMoon</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function openVideoModal(videoUrl) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('modalIframe');
+      iframe.src = videoUrl;
+      modal.classList.remove('hidden');
+    }
+  
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('modalIframe');
+      iframe.src = ''; // Dừng video khi đóng
+      modal.classList.add('hidden');
+    }
+  </script>
+  
   <style>
     .scrolled {
       background-color: rgba(255, 255, 255, 0.9);
@@ -26,6 +42,13 @@
 
 </head>
 
+<div id="videoModal" class="fixed inset-0 z-[9999] bg-black bg-opacity-80 hidden flex justify-center items-center">
+  <div class="relative w-[90%] max-w-5xl">
+    <button onclick="closeVideoModal()" class="absolute top-2 right-2 text-white text-3xl font-bold z-10">×</button>
+    <iframe id="modalIframe" class="w-full aspect-video rounded-xl shadow-xl" allowfullscreen></iframe>
+  </div>
+</div>
+
 <body>
   <!-- HEADER -->
   <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500">
@@ -38,13 +61,13 @@
         <a href="#about" class="hover:text-blue-500">Câu chuyện của tôi</a>
         <a href="#features" class="hover:text-blue-500">Dịch vụ khai vấn</a>
         <a href="#subjects" class="hover:text-blue-500">Đối tượng tham gia</a>
-        <a href="#submitform" class="hover:text-blue-500 ">Đăng ký</a>
+        <a href="#signup" class="hover:text-blue-500 ">Đăng ký</a>
         <a href="#submitform" class="hover:text-blue-500 ">Đặt lịch</a>
       </nav>
     </div>
   </header>
 
-  <section class="w-full pt-28 min-h-screen bg-gradient-to-br from-pink-100 via-white to-white py-6">
+  <section class="w-full pt-28 min-h-screen bg-gradient-to-br from-[#EEBFD1] via-white to-white py-6">
     <div class="max-w-7xl mx-auto px-4 space-y-10 flex flex-col justify-start">
 
       <div>
@@ -90,7 +113,7 @@
 
 
   <!-- Giới thiệu -->
-  <section id="about" class="bg-pink-500 text-white py-12">
+  <section id="about" class="bg-[#DABBE0] text-white py-12">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -148,7 +171,7 @@
 
       <div class="relative py-6">
         <button id="prevBtn"
-          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
           ◀
         </button>
 
@@ -224,7 +247,7 @@
         </div>
 
         <button id="nextBtn"
-          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
+          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
           ▶
         </button>
       </div>
@@ -261,7 +284,7 @@
   </section>
   <!-- Đăng ký-->
   <!-- cần thay đường link appscript của gg sheet của khách hàng -->
-  <section id="submitform" class="py-20 bg-white bg-gradient-to-br from-pink-100 via-white to-white">
+  <section id="submitform" class="py-20 bg-white bg-gradient-to-br from-[#EEBFD1] via-white to-white">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-semibold text-center mb-12 text-gray-800">Đặt lịch tư vấn miễn phí 30 phút cùng Coach
         Moon</h3>
@@ -269,23 +292,23 @@
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div class="space-y-6">
           <p><strong>Một hành trình khai mở để bạn sống và làm việc rực rỡ từ chính bản thể của mình.</strong></p>
-          <p>"Sống rực rỡ không bắt đầu bằng thay đổi bên ngoài, mà từ việc hiểu mình là ai."</p>
+          <p><em>"Sống rực rỡ không bắt đầu bằng thay đổi bên ngoài, mà từ việc hiểu mình là ai."</em></p>
           <p></p>Trong buổi tư vấn cá nhân 30 phút cùng Coach Moon – Nhà khai vấn quốc tế với hơn 22 năm kinh nghiệm
           phát triển con người – bạn sẽ:
           <p></p>✔️ Được lắng nghe và thấu hiểu từ góc nhìn khách quan
           <p></p>✔️ Nhìn rõ hơn những điều đang cản trở bạn tiến lên
           <p></p>✔️ Nhận định hướng hoặc đề xuất bước đi phù hợp với mục tiêu hiện tại
-          <p> Giá trị buổi tư vấn: 3.000.000đ
-          <p>Hiện đang được tư vấn miễn phí trong lần đầu tiên bạn ghé thăm website – chỉ dành cho những ai sẵn sàng bắt
-            đầu hành trình thay đổi.
+          <p><strong>Giá trị buổi tư vấn: 3.000.000đ</strong> 
+          <p><strong>Hiện đang được tư vấn miễn phí trong lần đầu tiên bạn ghé thăm website – chỉ dành cho những ai sẵn sàng bắt
+            đầu hành trình thay đổi.</strong>
           <p>Coach Moon sẽ đồng hành cùng bạn bằng sự tận tâm và tử tế, tạo nên một không gian đủ an toàn để bạn lắng
             nghe bản thân rõ hơn.
-          <p>👉 Đăng ký ngay hôm nay để giữ chỗ và bắt đầu hành trình trở về với chính mình.
+          <p><strong>👉 Đăng ký ngay hôm nay để giữ chỗ và bắt đầu hành trình trở về với chính mình.</strong>
         </div>
 
         <!-- Form -->
         <form method="post" id="contactForm"
-          class="bg-gradient-to-br from-purple-100 via-pink-100 to-white p-8 rounded-lg shadow-lg space-y-6"
+          class="bg-gradient-to-br from-purple-100 via-[#ECAAC2] to-white p-8 rounded-lg shadow-lg space-y-6"
           action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
 
           <!-- Họ và tên -->
@@ -325,10 +348,27 @@
 
           <!-- Nút submit -->
           <button type="submit"
-            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-pink-700 transition duration-300">
+            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-[#BED1E3] transition duration-300">
             Đặt lịch
           </button>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="register-process" class="py-20 bg-gradient-to-br from-white via-pink-50 to-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-pink-600 mb-10">Quy trình đăng ký dịch vụ khai vấn</h2>
+      <div class="space-y-8 text-lg text-gray-800">
+        <div><strong>Bước 1: Đăng ký</strong><br>Điền đầy đủ thông tin vào form bên dưới.</div>
+        <div><strong>Bước 2: Thanh toán</strong><br>Hoàn tất phí dịch vụ, chụp màn hình xác nhận qua Zalo Coach MoonPham và nhận email xác nhận đăng ký thành công.<br>
+          <img src="img/STK.jpg" alt="QR chuyển khoản" class="w-72 mx-auto my-4 shadow rounded-lg">
+        </div>
+        <div><strong>Bước 3: Nhận link test trong vòng 24h</strong><br>Dành 30 phút, không gian yên tĩnh và thời gian rảnh để làm bài test.<br>
+        <em class="text-sm text-gray-600">Lưu ý: Tin tưởng và làm bài test như yêu cầu, không phân tâm đúng sai hay gặp những câu hỏi giống nhau.</em></div>
+        <div><strong>Bước 4: Nhận liền kết quả bài test sau khi làm</strong><br>Gửi lại kết quả cho Coach qua Zalo.</div>
+        <div><strong>Bước 5: Đặt hẹn & tham gia đúng hẹn</strong><br>Nếu có thay đổi, báo trước coach 24h.</div>
+        <div><strong>🌟 Chúc bạn có một hành trình học hỏi và khám phá thật hiệu quả. Hãy tin rằng bạn chính là ngọn hải đăng của chính mình!</strong></div>
       </div>
     </div>
   </section>
@@ -366,8 +406,8 @@
           </div>
           <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
             thêm</button>
-          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
-            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+          <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')" 
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-[#DABBE0] rounded hover:bg-[#93AECA] transition duration-200">
             Xem cảm nhận
           </button>
           <div id="videoModal" class="video-modal">
@@ -404,7 +444,7 @@
           <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
             thêm</button>
           <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
-            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-[#DABBE0] rounded hover:bg-[#93AECA] transition duration-200">
             Xem cảm nhận
           </button>
           <div id="videoModal" class="video-modal">
@@ -437,7 +477,7 @@
           <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
             thêm</button>
           <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
-            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-[#DABBE0] rounded hover:bg-[#93AECA] transition duration-200">
             Xem cảm nhận
           </button>
           <div id="videoModal" class="video-modal">
@@ -471,7 +511,7 @@
           <button onclick="toggleText(this)" class="mt-6 text-sm text-blue-500 hover:underline self-center">Đọc
             thêm</button>
           <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
-            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-[#DABBE0] rounded hover:bg-[#93AECA] transition duration-200">
             Xem cảm nhận
           </button>
           <div id="videoModal" class="video-modal">
@@ -506,7 +546,7 @@
             thêm</button>
 
           <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
-            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-[#DABBE0] rounded hover:bg-[#93AECA] transition duration-200">
             Xem cảm nhận
           </button>
 
@@ -577,7 +617,7 @@
 
           <!-- Nút -->
           <button onclick="openVideoModal('https://drive.google.com/file/d/1MXXre2zdEe4S_eL74ZJVuCAUjt-D4Hed/preview')"
-            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-pink-500 rounded hover:bg-pink-600 transition duration-200">
+            class="mt-2 px-4 py-2 text-sm font-medium text-white bg-[#DABBE0] rounded hover:bg-[#93AECA] transition duration-200">
             Xem cảm nhận
           </button>
 
@@ -599,7 +639,7 @@
       </h3>
       <div class="relative py-6">
         <button id="prevBtnProducts"
-          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
           ◀
         </button>
 
@@ -610,7 +650,7 @@
               <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
                 target="_blank" rel="noopener noreferrer">
                 <img src="img/banner dichvu/1.jpg" class="w-full h-[250px] object-cover" />
-                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   9.900.000 VNĐ
                 </div>
               </a>
@@ -623,7 +663,7 @@
               </div>
               <div class="flex justify-between items-center mt-3">
                 <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">
+                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
                   Đăng ký ngay
                 </button>
               </div>
@@ -635,7 +675,7 @@
             <div class="relative">
               <a href="https://drive.google.com/file/d/173H4a0sdhVhfaqoQ9UZWgbKKsgILgTfT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <img src="img/banner dichvu/2.jpg" class="w-full h-[250px] object-cover" />
-                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   6.000.000 VNĐ
                 </div>
               </a>
@@ -646,7 +686,7 @@
               <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
               <div class="mt-3">
                 <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">Đăng ký
                   ngay</button>
               </div>
             </div>
@@ -657,7 +697,7 @@
             <div class="relative">
               <a href="https://drive.google.com/file/d/1PvictYiOTgDO0zNbfTKyBgCHhLbA60-w/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <img src="img/banner dichvu/3.jpg" class="w-full h-[250px] object-cover" />
-                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   9.900.000 VNĐ
                 </div>
               </a>
@@ -668,7 +708,7 @@
               <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
               <div class="mt-3">
                 <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">Đăng ký
                   ngay</button>
               </div>
             </div>
@@ -679,7 +719,7 @@
             <div class="relative">
               <a href="https://drive.google.com/file/d/ghi789/view" target="_blank" rel="noopener noreferrer">
                 <img src="img/default.jpg" class="w-full h-[250px] object-cover" />
-                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   1.800.000 VNĐ
                 </div>
               </a>
@@ -690,7 +730,7 @@
               <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
               <div class="mt-3">
                 <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">Đăng ký
                   ngay</button>
               </div>
             </div>
@@ -701,7 +741,7 @@
             <div class="relative">
               <a href="https://drive.google.com/file/d/ghi789/view" target="_blank" rel="noopener noreferrer">
                 <img src="img/default.jpg" class="w-full h-[250px] object-cover" />
-                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   1.800.000 VNĐ
                 </div>
               </a>
@@ -712,7 +752,7 @@
               <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
               <div class="mt-3">
                 <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">Đăng ký
                   ngay</button>
               </div>
             </div>
@@ -723,7 +763,7 @@
             <div class="relative">
               <a href="https://drive.google.com/file/d/ghi789/view" target="_blank" rel="noopener noreferrer">
                 <img src="img/default.jpg" class="w-full h-[250px] object-cover" />
-                <div class="absolute bottom-4 left-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   1.800.000 VNĐ
                 </div>
               </a>
@@ -734,7 +774,7 @@
               <div class="flex items-center text-yellow-500">★★★★★ (5)</div>
               <div class="mt-3">
                 <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-pink-600 text-white py-2 px-4 rounded w-full hover:bg-pink-700 transition">Đăng ký
+                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">Đăng ký
                   ngay</button>
               </div>
             </div>
@@ -742,13 +782,78 @@
 
 
           <button id="nextBtnProducts"
-            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-pink-100 transition duration-300">
+            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
             ▶
           </button>
   </section>
+  <section id="signup" class="py-20 bg-white bg-gradient-to-br from-[#EEBFD1] via-white to-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold text-center mb-12 text-gray-800">Đăng ký dịch vụ</h3>
 
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <p>Một hành trình khai mở để bạn sống rực rỡ với chính mình</p>
+          <p>✨ Thấu hiểu chính mình một cách sâu sắc</p>
+          <p>✨ Gỡ rối những vướng mắc trong cuộc sống hoặc công việc</p>
+          <p>✨ Định hình con đường sống đúng với giá trị và bản thể</p>
+          <p>💧 <strong>Mức đầu tư trọn gói hiện đang được ưu đãi đặc biệt trong tháng đầu tiên</strong></p>
+          <p>🎯 Cơ hội tốt nhất để bạn bắt đầu hành trình chuyển hóa với sự đồng hành tận tâm, tử tế từ Coach Moon.</p>
+          <p>👉 <strong>Đăng ký ngay hôm nay để giữ ưu đãi, vì số lượng suất ưu đãi có giới hạn.</strong></p>
+          <p><strong>Bước 6:</strong> Đồng hành cá nhân hóa</p>
+          <p>Coach Moon tiếp tục follow-up 1:1 để theo sát tiến trình và điều chỉnh chiến lược phù hợp.</p>
+        </div>
 
-  <section id="subjects" class="py-20 bg-gradient-to-br from-pink-100 via-white to-white">
+        <!-- Form -->
+        <form method="post" id="contactForm"
+          class="bg-gradient-to-br from-purple-100 via-[#ECAAC2] to-white p-8 rounded-lg shadow-lg space-y-6"
+          action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
+
+          <!-- Họ và tên -->
+          <div class="relative">
+            <input name="name" id="name" type="text" placeholder="Họ và tên" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Email -->
+          <div class="relative">
+            <input name="email" id="email" type="email" placeholder="Email" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Số điện thoại -->
+          <div class="relative">
+            <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Công việc hiện tại -->
+          <div class="relative">
+            <input name="your-job" id="your-job" placeholder="Công việc hiện tại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Dịch vụ bạn quan tâm -->
+          <div class="relative">
+            <input name="your-coach" id="your-coach" placeholder="Dịch vụ bạn quan tâm" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <!-- Nút submit -->
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-[#BED1E3] transition duration-300">
+            Đăng ký ngay
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="subjects" class="py-20 bg-gradient-to-br from-[#EEBFD1] via-white to-white">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <!-- Tiêu đề -->
       <h2 class="text-3xl font-bold mb-6">Dành cho những người đang ở ngã ba cuộc đời...</h2>
@@ -798,6 +903,83 @@
     </div>
   </section>
 
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-pink-600 mb-12">Câu hỏi thường gặp</h2>
+      <div class="space-y-8 text-gray-800 text-lg">
+  
+        <div class="border-b pb-4">
+          <p class="font-semibold text-xl">1. Coaching có thực hiện online không?</p>
+          <p class="faq-answer hidden">
+            ✅ Có. Toàn bộ quá trình coaching và tư vấn đều được thực hiện online (qua Zoom), đảm bảo linh hoạt về thời gian, phù hợp cho người bận rộn. Bạn chỉ cần chuẩn bị không gian yên tĩnh và kết nối internet ổn định.
+          </p>
+          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
+        </div>
+  
+        <div class="border-b pb-4">
+          <p class="font-semibold text-xl">2. Tôi chưa chắc mình có phù hợp – có thể đăng ký trước để tìm hiểu không?</p>
+          <p class="faq-answer hidden">
+            Tất nhiên rồi. Bạn có thể đăng ký buổi tư vấn định hướng miễn phí 30 phút, để Coach Moon lắng nghe bạn chia sẻ, hiểu rõ nhu cầu và tư vấn xem đâu là giải pháp phù hợp nhất với bạn.
+          </p>
+          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
+        </div>
+  
+        <div class="border-b pb-4">
+          <p class="font-semibold text-xl">3. Tôi chỉ muốn trải nghiệm 1 phần, có thể tách lẻ công cụ không?</p>
+          <p class="faq-answer hidden">
+            ✅ Có thể. Bạn hoàn toàn có thể đăng ký riêng từng phần như:<br>
+            ● Phân tích sinh trắc học vân tay<br>
+            ● Bài test DISC hoặc Motivators<br>
+            ● Coaching 1 buổi duy nhất<br>
+            Vui lòng liên hệ trực tiếp qua Zalo Coach Moon để được tư vấn gói mini phù hợp.
+          </p>
+          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
+        </div>
+  
+        <div class="border-b pb-4">
+          <p class="font-semibold text-xl">4. Sau buổi coaching tôi còn được hỗ trợ gì thêm không?</p>
+          <p class="faq-answer hidden">
+            ✅ Có. Bạn sẽ nhận được:<br>
+            ● File tổng hợp kết quả phân tích<br>
+            ● Bản đồ cá nhân hóa gợi ý định hướng<br>
+            ● Bộ tài liệu tham khảo kèm theo<br><br>
+            👉 Nếu bạn muốn tiếp tục được đồng hành sâu hơn, bạn có thể nâng cấp lên Gói Coach 6 tháng 1:1, với ưu đãi 10% dành riêng cho khách hàng đã trải nghiệm gói cơ bản.<br>
+            📍 [Tìm hiểu gói Coach đồng hành tại đây]
+          </p>
+          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
+        </div>
+  
+        <div class="border-b pb-4">
+          <p class="font-semibold text-xl">5. Ai nên tham gia gói coaching này?</p>
+          <p class="faq-answer hidden">
+            👉<br>
+            ● Freelancer, coach, chuyên gia tư vấn muốn nâng tầm sự nghiệp<br>
+            ● Người kinh doanh nhỏ – online hoặc truyền thống<br>
+            ● Founder, chủ doanh nghiệp đang phát triển thương hiệu cá nhân<br>
+            ● Nhân sự cấp trung/cao có kinh nghiệm, nhưng đang hoang mang, mất kết nối với công việc<br>
+            ● Người từng mạnh mẽ, độc lập… nay cần tìm lại chính mình và một hướng đi mới<br>
+            ● Phụ huynh có con từ 13–18 tuổi, đang tìm cách định hướng nghề nghiệp cho con
+          </p>
+          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
+        </div>
+  
+      </div>
+    </div>
+  
+    <script>
+      function toggleFAQ(button) {
+        const answer = button.previousElementSibling;
+        const isHidden = answer.classList.contains('hidden');
+        if (isHidden) {
+          answer.classList.remove('hidden');
+          button.textContent = 'Thu gọn';
+        } else {
+          answer.classList.add('hidden');
+          button.textContent = 'Xem thêm';
+        }
+      }
+    </script>
+  </section>
   <footer id="footer" class="bg-gray-800 text-white py-10 text-center">
     <p>&copy; Coachmoon</p>
   </footer>
