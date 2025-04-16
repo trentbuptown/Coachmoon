@@ -54,18 +54,14 @@
     <div
       class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between h-auto md:h-28 space-y-4 md:space-y-0 relative">
 
-      <!-- Logo -->
       <div class="w-full md:w-auto text-center md:text-left">
         <a href="/Coachmooon" class="inline-block">
-          <img src="img/slogan-icon.png" alt="Coachmoon Logo" class="w-auto object-contain mx-auto md:mx-0 md:h-60"
-            style="height: 237px;" />
+          <img src="img/slogan-icon.png" alt="Coachmoon Logo" class="w-auto object-contain mx-auto md:mx-0 h-24 md:h-60" />
         </a>
       </div>
 
-      <!-- Navigation + Buttons -->
       <div class="w-full flex flex-col md:flex-row md:items-center md:justify-end gap-4 text-blue-900 font-poppins">
 
-        <!-- Navigation Links -->
         <nav class="flex flex-wrap justify-center md:justify-end gap-4">
           <a href="#contents" class="hover:text-blue-500">Giới thiệu</a>
           <a href="#about" class="hover:text-blue-500">Câu chuyện của tôi</a>
@@ -74,9 +70,8 @@
           <a href="#faq" class="hover:text-blue-500">FAQ</a>
         </nav>
 
-        <!-- Buttons -->
         <div class="flex justify-center md:justify-end gap-4">
-          <a href="#signup"
+          <a href="#register-service"
             class="border border-[#E0B0FF] px-4 py-2 rounded-lg text-white bg-[#E0B0FF] hover:bg-[#D08DFF] transition">Đăng
             ký</a>
           <a href="#submitform"
@@ -90,9 +85,10 @@
 
 
 
-  <section class="w-full pt-28 min-h-screen bg-gradient-to-br from-[#EEBFD1] via-white to-white py-6">
-    <div class="max-w-7xl mx-auto px-4 space-y-10 flex flex-col justify-start">
+  <section class="w-full md:pt-28 min-h-screen bg-gradient-to-br from-[#EEBFD1] via-white to-white py-6">
 
+
+    <div class="max-w-7xl mx-auto px-4 space-y-10 flex flex-col justify-start">
       <div>
         <a href="#submitform">
           <img src="img/BANNER.png" alt="Banner" class="w-full h-auto rounded-xl shadow-md">
@@ -134,12 +130,10 @@
   </div>
 
 
-  <!-- Giới thiệu -->
+
   <section id="about" class="bg-[#DABBE0] text-white py-12">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-        <!-- Hình ảnh -->
         <div class="flex justify-center">
           <img src="img/bbb.JPEG" class="max-h-[1000px] w-full object-contain">
         </div>
@@ -183,8 +177,6 @@
       <h3 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">
         MY STORY: SỐNG RỰC RỠ TỪ BẢN THỂ
       </h3>
-
-      <!-- Video -->
       <div class="flex justify-center mb-6">
         <iframe src="https://drive.google.com/file/d/10ZQ8rKALWy5KJlUnHUOi-e_pT-3EXetI/preview" width="100%"
           height="auto" style="max-width: 640px; aspect-ratio: 16/9;" allow="autoplay" allowfullscreen>
@@ -192,15 +184,11 @@
       </div>
 
       <div class="text-center mt-8">
-        <a href="/Coachmooon/ebook.html"
+        <a href="ebook.html"
           class="border border-[#E0B0FF] px-4 py-2 rounded-lg text-white bg-[#E0B0FF] hover:bg-[#D08DFF] transition">NHẬN
           EBOOK</a>
       </div>
 
-
-
-
-      <!-- Slider -->
       <div class="relative py-6">
         <button id="prevBtn"
           class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
@@ -208,7 +196,6 @@
         </button>
 
         <div id="slider" class="flex overflow-x-auto no-scrollbar space-x-6 scroll-smooth">
-          <!-- Slide items -->
           <div
             class="min-w-[66.6666%] sm:min-w-[50%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
             <img src="img/coach_header_img/1.jpg" class="w-full h-[250px] object-cover" />
@@ -1185,6 +1172,22 @@
   <footer id="footer" class="bg-gray-800 text-white py-10 text-center">
     <p>&copy; Coachmoon</p>
   </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+    const bannerSection = document.querySelector("section");
+
+    // Kiểm tra kích thước màn hình, chỉ áp dụng với mobile
+    const isMobile = window.innerWidth < 768;
+
+    if (header && bannerSection && isMobile) {
+      const headerHeight = header.offsetHeight;
+      bannerSection.style.paddingTop = `${headerHeight}px`;
+    }
+  });
+</script>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
