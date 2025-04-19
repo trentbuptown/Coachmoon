@@ -38,16 +38,15 @@ if (carouselSteps && prevBtnSteps && nextBtnSteps) {
     });
 }
 
-
-// ---------------- AUTO-SLIDER (Banner) ----------------
+// my story
 const slider = document.getElementById('slider');
 const next = document.getElementById('nextBtn');
 const prev = document.getElementById('prevBtn');
-const scrollAmount = slider?.offsetWidth / 2;
+let scrollAmount = slider?.offsetWidth / 2;
 
 function scrollToNext() {
     if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
-        slider.scrollLeft = 0;
+        slider.scrollLeft = 0; // Quay lại đầu slider
     } else {
         slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
@@ -55,6 +54,7 @@ function scrollToNext() {
 
 if (slider && next && prev) {
     next.addEventListener('click', scrollToNext);
+
     prev.addEventListener('click', () => {
         if (slider.scrollLeft === 0) {
             slider.scrollLeft = slider.scrollWidth - slider.offsetWidth;
@@ -63,10 +63,17 @@ if (slider && next && prev) {
         }
     });
 
+    // Tự động trượt ảnh
     let autoSlideInterval = setInterval(scrollToNext, 5000);
     slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
     slider.addEventListener('mouseleave', () => autoSlideInterval = setInterval(scrollToNext, 5000));
+
+    // Cập nhật lại scrollAmount khi thay đổi kích thước màn hình
+    window.addEventListener('resize', () => {
+        scrollAmount = slider?.offsetWidth / 2;
+    });
 }
+
 
 // ---------------- HEADER SPACING FOR MOBILE ----------------
 const header = document.getElementById('header');
