@@ -381,7 +381,7 @@
               <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
                 target="_blank" rel="noopener noreferrer">
                 <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
-                  <img src="img/banner dichvu/1.jpg" class="max-h-full object-contain" />
+                  <img src="" class="max-h-full object-contain" />
                 </div>
                 
                 <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
@@ -404,7 +404,7 @@
               <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
                 target="_blank" rel="noopener noreferrer">
                 <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
-                  <img src="img/banner dichvu/1.jpg" class="max-h-full object-contain" />
+                  <img src="" class="max-h-full object-contain" />
                 </div>                
                 <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
                   VNĐ
@@ -433,45 +433,6 @@
       </div>
     </div>
   </section>
-
-  <!-- <style>
-    @media (max-width: 768px) {
-      #sliderProducts {
-        flex-direction: column;
-        /* Switch to vertical layout on mobile */
-        align-items: center;
-        /* Center align items on mobile */
-      }
-
-      .min-w-[85%],
-      .sm:min-w-[45%],
-      .md:min-w-[33.3333%] {
-        min-width: 100%;
-        /* Ensure each item takes full width on mobile */
-        margin-bottom: 16px;
-        /* Add some space between items */
-      }
-    }
-
-    @media (min-width: 769px) {
-      #sliderProducts {
-        flex-direction: row;
-        /* Default horizontal layout on desktop */
-        align-items: flex-start;
-        /* Align to the start */
-      }
-
-      .min-w-[85%],
-      .sm:min-w-[45%],
-      .md:min-w-[33.3333%] {
-        min-width: 33.3333%;
-        /* Keep 3 items per row on desktop */
-      }
-    }
-  </style> -->
-
-
-
 
   <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
@@ -597,62 +558,77 @@
       </div>
     </div>
   </section>
-  <section class="py-20 bg-gradient-to-b from-white via-[#F8EDFF] to-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-4xl font-bold mb-16" style="color: #E0B0FF;">
+
+
+  <section id="" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">
         LỘ TRÌNH 6 BƯỚC CHÚNG TA SẼ ĐỒNG HÀNH CÙNG NHAU
-      </h2>
+      </h3>
+      <div class="relative py-6">
+        <button id="prevBtnSteps"
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
+          ◀
+        </button>
 
-      <div class="relative">
-        <!-- Carousel -->
-        <div class="flex overflow-hidden">
-          <div class="flex transition-transform duration-500" id="carouselSlides">
-            <!-- Group 1 (Bước 1, Bước 2, Bước 3) -->
-            <div class="flex space-x-4">
-              <div class="flex flex-col items-center w-1/3">
-                <img src="img/6steps/step1.png" alt="Bước 1" class="w-full object-cover rounded-2xl shadow-lg">
-              </div>
-              <div class="flex flex-col items-center w-1/3">
-                <img src="img/6steps/step2.png" alt="Bước 2" class="w-full object-cover rounded-2xl shadow-lg">
-              </div>
-              <div class="flex flex-col items-center w-1/3">
-                <img src="img/6steps/step3.png" alt="Bước 3" class="w-full object-cover rounded-2xl shadow-lg">
-              </div>
-            </div>
-
-            <!-- Group 2 (Bước 4, Bước 5, Bước 6) -->
-            <div class="flex space-x-4">
-              <div class="flex flex-col items-center w-1/3">
-                <img src="img/6steps/step4.png" alt="Bước 4" class="w-full object-cover rounded-2xl shadow-lg">
-              </div>
-              <div class="flex flex-col items-center w-1/3">
-                <img src="img/6steps/step5.png" alt="Bước 5" class="w-full object-cover rounded-2xl shadow-lg">
-              </div>
-              <div class="flex flex-col items-center w-1/3">
-                <img src="img/6steps/step6.png" alt="Bước 6" class="w-full object-cover rounded-2xl shadow-lg">
-              </div>
+        <div id="sliderSteps" class="flex overflow-x-auto no-scrollbar space-x-6 scroll-smooth">
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+                <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
+                  <img src="img/6steps/step1.png" class="max-h-full object-contain" />
+                </div>                
             </div>
           </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="absolute inset-y-0 left-0 flex items-center">
-          <button id="prevBtnSteps"
-            class="bg-purple-500 text-white p-2 rounded-full shadow-md hover:bg-purple-600 focus:outline-none">
-            ←
-          </button>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center">
-          <button id="nextBtnSteps"
-            class="bg-purple-500 text-white p-2 rounded-full shadow-md hover:bg-purple-600 focus:outline-none">
-            →
-          </button>
-        </div>
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+                <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
+                  <img src="img/6steps/step2.png" class="max-h-full object-contain" />
+                </div>                
+            </div>
+          </div>
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+                <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
+                  <img src="img/6steps/step3.png" class="max-h-full object-contain" />
+                </div>                
+            </div>
+          </div>
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+                <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
+                  <img src="img/6steps/step4.png" class="max-h-full object-contain" />
+                </div>                
+            </div>
+          </div>
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+                <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
+                  <img src="img/6steps/step5.png" class="max-h-full object-contain" />
+                </div>                
+            </div>
+          </div>
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+                <div class="w-full h-[200px] sm:h-[220px] md:h-[250px] flex items-center justify-center overflow-hidden rounded-t-xl bg-white">
+                  <img src="img/6steps/step6.png" class="max-h-full object-contain" />
+                </div>                
+            </div>
+          </div>
+        </div>       
+        <button id="nextBtnSteps"
+          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
+          ▶
+        </button>
       </div>
     </div>
   </section>
-
-
+  
   <section id="" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">
@@ -675,7 +651,7 @@
           class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
           ◀
         </button>
-
+        
         <div id="slider" class="flex overflow-x-auto no-scrollbar space-x-6 scroll-smooth snap-x snap-mandatory">
           <div
             class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300 snap-start">

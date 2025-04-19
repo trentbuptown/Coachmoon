@@ -15,28 +15,27 @@ function closeVideoModal() {
 
 
 // -------- CAROUSEL 6 BƯỚC (Step Images) --------
-const carouselSteps = document.getElementById('carouselSlides');
+const sliderSteps = document.getElementById('sliderSteps');
 const prevBtnSteps = document.getElementById('prevBtnSteps');
 const nextBtnSteps = document.getElementById('nextBtnSteps');
-let currentIndexSteps = 0;
-const totalStepSlides = 2;
 
-function updateCarouselSteps() {
-    const offset = -100 * currentIndexSteps;
-    carouselSteps.style.transform = `translateX(${offset}%)`;
+// Tự động tính khoảng scroll theo chiều rộng thực tế
+function scrollSliderSteps(direction) {
+  const itemWidth = sliderSteps.querySelector('div').offsetWidth + 24; // 24 = khoảng cách giữa các items (space-x-4)
+  
+  sliderSteps.scrollBy({
+    left: direction === 'next' ? itemWidth : -itemWidth,
+    behavior: 'smooth',
+  });
 }
 
-if (carouselSteps && prevBtnSteps && nextBtnSteps) {
-    prevBtnSteps.addEventListener('click', () => {
-        currentIndexSteps = (currentIndexSteps - 1 + totalStepSlides) % totalStepSlides;
-        updateCarouselSteps();
-    });
-
-    nextBtnSteps.addEventListener('click', () => {
-        currentIndexSteps = (currentIndexSteps + 1) % totalStepSlides;
-        updateCarouselSteps();
-    });
+if (sliderSteps && prevBtnSteps && nextBtnSteps) {
+  prevBtnSteps.addEventListener('click', () => scrollSliderSteps('prev'));
+  nextBtnSteps.addEventListener('click', () => scrollSliderSteps('next'));
 }
+
+
+
 
 // my story
 const slider = document.getElementById('slider');
