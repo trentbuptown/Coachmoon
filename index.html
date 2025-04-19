@@ -6,22 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoachMoon</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    function openVideoModal(videoUrl) {
-      const modal = document.getElementById('videoModal');
-      const iframe = document.getElementById('modalIframe');
-      iframe.src = videoUrl;
-      modal.classList.remove('hidden');
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const iframe = document.getElementById('modalIframe');
-      iframe.src = ''; // Dừng video khi đóng
-      modal.classList.add('hidden');
-    }
-  </script>
-
+ 
   <style>
     .scrolled {
       background-color: rgba(255, 255, 255, 0.9);
@@ -49,13 +34,13 @@
   </div>
 </div>
 
-<body>
+<body class="flex flex-col min-h-screen">
   <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500">
     <div
       class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between h-auto md:h-28 space-y-4 md:space-y-0 relative">
 
       <div class="w-full md:w-auto text-center md:text-left">
-        <a href="/Coachmooon" class="inline-block">
+        <a href="/Coachmoon" class="inline-block">
           <img src="img/slogan-icon2.png" alt="Coachmoon Logo"
             class="w-auto object-contain mx-auto md:mx-0 h-24 md:h-40" />
         </a>
@@ -84,53 +69,167 @@
     </div>
   </header>
 
+  <section class="w-full pt-32 md:pt-48 pb-10 bg-gradient-to-br from-[#EEBFD1] via-white to-white">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="grid md:grid-cols-2 gap-14 items-center">
+
+        <div class="flex justify-center md:justify-end mt-10 md:mt-0">
+          <a href="#submitform">
+            <img src="img/BANNER.png" alt="Banner"
+              class="w-full max-w-xl h-auto rounded-2xl shadow-2xl object-contain" />
+          </a>
+        </div>
 
 
-  <section class="w-full md:pt-28 min-h-screen bg-gradient-to-br from-[#EEBFD1] via-white to-white py-6">
-
-
-    <div class="max-w-7xl mx-auto px-4 space-y-10 flex flex-col justify-start">
-      <div>
-        <a href="#submitform">
-          <img src="img/BANNER.png" alt="Banner" class="w-full h-auto rounded-xl shadow-md">
-        </a>
-      </div>
-
-      <div id="contents" class="text-center">
-        <h1 class="text-4xl text-pink-600 font-bold mb-12 uppercase tracking-wider" style="color: #E0B0FF;">
-          CÓ PHẢI BẠN ĐANG...
-        </h1>
-        <div class="text-2xl space-y-4 text-left bg-white p-10 rounded-3xl shadow-2xl border-l-[10px] border-pink-500">
-          <p><span class="font-bold ">Cảm thấy lạc lõng</span> trong sự nghiệp và cuộc sống, không rõ bước tiếp theo là
-            gì?</p>
-          <p><span class="font-bold ">Mong muốn làm lại từ đầu,</span> nhưng vẫn không hiểu rõ mình thực sự muốn gì và
-            cần gì?</p>
-          <p><span class="font-bold ">Đã từng là một người phụ nữ thành đạt,</span> nhưng giờ đây bạn không còn cảm thấy
-            hạnh phúc và thoả mãn như trước?</p>
-          <p><span class="font-bold ">Sẵn sàng thay đổi,</span> nhưng bạn chưa tìm ra con đường cụ thể để hành động mạnh
-            mẽ và tự tin hơn?</p>
-          <p><span class="font-bold ">Lo lắng về tương lai con cái,</span> và không hiểu tại sao con bạn lại có những
-            hành vi khó hiểu, dễ xúc động hay phản ứng mạnh mẽ?</p>
-          <p><span class="font-bold ">Quan tâm đến sự phát triển của con,</span> năng lực bẩm sinh, tư duy não bộ, phong
-            cách học và tương tác xã hội của con cái.</p>
+        <!-- Nội dung bên phải -->
+        <div id="contents" class="text-left">
+          <h1 class="text-4xl font-bold mb-8 uppercase tracking-wider text-center md:text-left" style="color: #E0B0FF;">
+            CÓ PHẢI BẠN ĐANG...
+          </h1>
+          <div
+            class="text-[18px] space-y-4 bg-white p-8 md:p-10 rounded-3xl shadow-2xl border-l-[10px] border-pink-500">
+            <p><span class="font-bold">Cảm thấy lạc lõng</span> trong sự nghiệp và cuộc sống, không rõ bước tiếp theo là
+              gì?</p>
+            <p><span class="font-bold">Mong muốn làm lại từ đầu,</span> nhưng vẫn không hiểu rõ mình thực sự muốn gì và
+              cần gì?</p>
+            <p><span class="font-bold">Đã từng là một người phụ nữ thành đạt,</span> nhưng giờ đây bạn không còn cảm
+              thấy hạnh phúc và thoả mãn như trước?</p>
+            <p><span class="font-bold">Sẵn sàng thay đổi,</span> nhưng bạn chưa tìm ra con đường cụ thể để hành động
+              mạnh mẽ và tự tin hơn?</p>
+            <p><span class="font-bold">Lo lắng về tương lai con cái,</span> và không hiểu tại sao con bạn lại có những
+              hành vi khó hiểu, dễ xúc động hay phản ứng mạnh mẽ?</p>
+            <p><span class="font-bold">Quan tâm đến sự phát triển của con,</span> năng lực bẩm sinh, tư duy não bộ,
+              phong cách học và tương tác xã hội của con cái.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
 
-  <div class="fixed bottom-24 md:bottom-6 right-6 z-50 space-y-3">
-    <a href="https://m.me/yourusername" target="_blank"
-      class="block w-14 h-14 bg-white-600 rounded-full shadow-lg hover:scale-110 transition transform duration-300 flex items-center justify-center">
-      <img src="img/icon/mess.png" alt="Messenger" class="w-7 h-7">
-    </a>
-    <a href="https://zalo.me/84903885044" target="_blank"
-      class="block w-14 h-14 bg-white-600 rounded-full shadow-lg hover:scale-110 transition transform duration-300 flex items-center justify-center">
-      <img src="img/icon/zalo.png" alt="Zalo" class="w-7 h-7">
-    </a>
-  </div>
+  <!-- Đăng ký-->
+  <!-- cần thay đường link appscript của gg sheet của khách hàng -->
+  <section id="submitform" class="py-20 bg-white bg-gradient-to-br from-[#EEBFD1] via-white to-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">ĐẶT LỊCH TƯ VẤN MIỄN PHÍ 30 PHÚT CÙNG COACHMOON
+      </h3>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <p><strong>Một hành trình khai mở để bạn sống và làm việc rực rỡ từ chính bản thể của mình.</strong></p>
+          <p><em>"Sống rực rỡ không bắt đầu bằng thay đổi bên ngoài, mà từ việc hiểu mình là ai."</em></p>
+          <p></p>Trong buổi tư vấn cá nhân 30 phút cùng Coach Moon – Nhà khai vấn quốc tế với hơn 22 năm kinh nghiệm
+          phát triển con người – bạn sẽ:
+          <p></p>✔️ Được lắng nghe và thấu hiểu từ góc nhìn khách quan
+          <p></p>✔️ Nhìn rõ hơn những điều đang cản trở bạn tiến lên
+          <p></p>✔️ Nhận định hướng hoặc đề xuất bước đi phù hợp với mục tiêu hiện tại
+          <p><strong>Giá trị buổi tư vấn: 3.000.000đ</strong>
+          <p><strong>Hiện đang được tư vấn miễn phí trong lần đầu tiên bạn ghé thăm website – chỉ dành cho những ai sẵn
+              sàng bắt
+              đầu hành trình thay đổi.</strong>
+          <p>Coach Moon sẽ đồng hành cùng bạn bằng sự tận tâm và tử tế, tạo nên một không gian đủ an toàn để bạn lắng
+            nghe bản thân rõ hơn.
+          <p><strong>👉 Đăng ký ngay hôm nay để giữ chỗ và bắt đầu hành trình trở về với chính mình.</strong>
+        </div>
+
+        <!-- Form -->
+        <form method="post" id="contactForm"
+          class="bg-gradient-to-br from-purple-100 via-[#ECAAC2] to-white p-8 rounded-lg shadow-lg space-y-6"
+          action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
+
+          <div class="relative">
+            <input name="name" id="name" type="text" placeholder="Họ và tên" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="email" id="email" type="email" placeholder="Email" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="your-job" id="your-job" placeholder="Công việc hiện tại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="your-coach" id="your-coach" placeholder="Dịch vụ bạn quan tâm" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-[#BED1E3] transition duration-300">
+            Đặt lịch
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
 
+
+
+  <section id="subjects" class="py-20 bg-gradient-to-br from-[#EEBFD1] via-white to-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <!-- Tiêu đề -->
+      <h2 class="text-3xl font-bold mb-6">DÀNH CHO NHỮNG NGƯỜI ĐANG Ở NGÃ BA CUỘC ĐỜI...</h2>
+      <p class="text-lg text-gray-700 mb-12">
+        Bạn khao khát sống đúng với giá trị thật của mình – không chỉ <strong>sống giỏi</strong>, mà còn muốn
+        <strong>sống đúng – sống sâu – sống tự do</strong>.
+      </p>
+
+      <div class="space-y-6 text-left">
+        <div class="flex items-start gap-4">
+          <div class="text-pink-500 text-xl">➤</div>
+          <p class="text-gray-800">Bạn là <strong>freelancer, coach</strong> hoặc <strong>chuyên gia tư vấn</strong>
+            trong lĩnh vực riêng của mình.</p>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="text-pink-500 text-xl">➤</div>
+          <p class="text-gray-800">Bạn đang <strong>kinh doanh nhỏ lẻ</strong>, online hoặc truyền thống và tìm kiếm
+            định hướng phát triển mới.</p>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="text-pink-500 text-xl">➤</div>
+          <p class="text-gray-800">Bạn là <strong>founder – chủ doanh nghiệp nhỏ & vừa</strong>, đang xây dựng thương
+            hiệu cá nhân bền vững.</p>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="text-pink-500 text-xl">➤</div>
+          <p class="text-gray-800">Bạn là <strong>chuyên viên, quản lý</strong> từng đi làm thuê 3–5 năm trở lên, đang
+            cảm thấy hoang mang hoặc mất kết nối với công việc.</p>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="text-pink-500 text-xl">➤</div>
+          <p class="text-gray-800">Bạn từng <strong>mạnh mẽ, độc lập</strong>… nhưng giờ cảm thấy trống rỗng và cần một
+            hướng đi mới trong cuộc đời.</p>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="text-pink-500 text-xl">➤</div>
+          <p class="text-gray-800">Bạn quan tâm đến sự phát triển của con cái (13–18 tuổi) – đang ở lứa tuổi cần định
+            hướng sự nghiệp, và bạn nhận ra rằng: <em>“Muốn đồng hành đúng với con, mình phải hiểu rõ bản thân
+              trước.”</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="about" class="bg-[#DABBE0] text-white py-12">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
@@ -173,6 +272,374 @@
       </div>
   </section>
 
+
+  <section id="dichvu" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">
+        CÁC DỊCH VỤ KHAI VẤN
+      </h3>
+      <div class="relative py-6">
+        <button id="prevBtnProducts"
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
+          ◀
+        </button>
+
+        <div id="sliderProducts" class="flex overflow-x-auto no-scrollbar space-x-6 scroll-smooth">
+          <!-- Service Item 1 -->
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/banner dichvu/1.jpg" class="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover rounded-t-xl"  />
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  9.900.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg sm:text-xl">Bản đồ cuộc đời</h4>
+              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/173H4a0sdhVhfaqoQ9UZWgbKKsgILgTfT/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/banner dichvu/2.jpg" class="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover rounded-t-xl"  />
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  6.000.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg sm:text-xl">La bàn sự nghiệp</h4>
+              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1PvictYiOTgDO0zNbfTKyBgCHhLbA60-w/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="img/banner dichvu/3.jpg" class="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover rounded-t-xl"  />
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  9.900.000 VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg sm:text-xl">Hiểu con từ gốc</h4>
+              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="" class="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover rounded-t-xl"  />
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg sm:text-xl">Hãy đón chờ</h4>
+              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="" class="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover rounded-t-xl"  />
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg sm:text-xl">Hãy đón chờ</h4>
+              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+            <div class="relative">
+              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer">
+                <img src="" class="w-full h-[200px] sm:h-[220px] md:h-[250px] object-cover rounded-t-xl"  />
+                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                  VNĐ
+                </div>
+              </a>
+            </div>
+            <div class="p-4 bg-white">
+              <h4 class="font-bold text-lg sm:text-xl">Hãy đón chờ</h4>
+              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
+              <div class="flex items-center text-yellow-500">
+                ★★★★★ (5)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-3">
+          <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
+            class="bg-[#93AECA] text-white py-2 px-6 rounded-lg hover:bg-[#BED1E3] transition duration-300">
+            Đăng ký ngay
+          </button>
+        </div>        
+        <button id="nextBtnProducts"
+          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
+          ▶
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 768px) {
+      #sliderProducts {
+        flex-direction: column;
+        /* Switch to vertical layout on mobile */
+        align-items: center;
+        /* Center align items on mobile */
+      }
+
+      .min-w-[85%],
+      .sm:min-w-[45%],
+      .md:min-w-[33.3333%] {
+        min-width: 100%;
+        /* Ensure each item takes full width on mobile */
+        margin-bottom: 16px;
+        /* Add some space between items */
+      }
+    }
+
+    @media (min-width: 769px) {
+      #sliderProducts {
+        flex-direction: row;
+        /* Default horizontal layout on desktop */
+        align-items: flex-start;
+        /* Align to the start */
+      }
+
+      .min-w-[85%],
+      .sm:min-w-[45%],
+      .md:min-w-[33.3333%] {
+        min-width: 33.3333%;
+        /* Keep 3 items per row on desktop */
+      }
+    }
+  </style>
+
+
+
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-[#A678F8] mb-12">
+        TÌM HIỂU 3 CÔNG CỤ CHUYÊN SÂU
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Tool 1 -->
+        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+          <div class="h-56 bg-gray-100 flex items-center justify-center">
+            <img src="img/img_tools/2.jpg" alt="Sinh trắc học vân tay" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-[#A678F8]">Sinh Trắc Học Vân Tay</h3>
+            <p class="text-gray-700">
+              Sinh trắc vân tay là ngành khoa học nghiên cứu về mối liên hệ giữa cấu trúc bộ não,
+              sự phân bổ các nơron thần kinh với vân tay của con người. Thông qua đó, có thể xác định
+              những khả năng thiên bẩm của từng cá nhân.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tool 2 -->
+        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+          <div class="h-56 bg-gray-100 flex items-center justify-center">
+            <img src="img/img_tools/4.jpg" alt="Công cụ DISC" class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-[#A678F8]">Công Cụ DISC</h3>
+            <p class="text-gray-700">
+              DISC là mô hình phân tích hành vi, giúp đo lường và xác định mức độ của các đặc điểm
+              tính cách thông qua 4 phong cách: Chi phối, Ảnh hưởng, Kiên định và Tận tâm.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+          <div class="h-56 bg-gray-100 flex items-center justify-center">
+            <img src="img/img_tools/Motivators.jpg" alt="Công cụ Motivators"
+              class="max-h-full max-w-full object-contain" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-[#A678F8]">Công Cụ Motivators</h3>
+            <p class="text-gray-700">
+              Motivators đo lường các yếu tố thúc đẩy hành vi của một cá nhân, tập trung vào 7 khía
+              cạnh động lực chính: Thẩm mỹ, Kinh tế, Cá nhân, Quyền lực, Vị tha, Quy tắc và Lý thuyết.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="register-service" class="py-20 bg-gradient-to-br from-white via-pink-50 to-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-center text-pink-600 mb-12" style="color: #E0B0FF;">
+        QUY TRÌNH ĐĂNG KÝ DỊCH VỤ KHAI VẤN
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6 text-gray-800 text-[17px]">
+          <div class="space-y-4">
+            <p><strong>Bước 1: Đăng ký</strong><br>Điền đầy đủ thông tin vào form bên phải.</p>
+            <p><strong>Bước 2: Thanh toán</strong><br>Chuyển khoản phí dịch vụ, chụp màn hình xác nhận gửi qua Zalo
+              Coach MoonPham và nhận email xác nhận.<br></p>
+            <img src="img/STK.jpg" alt="QR chuyển khoản" class="w-60 mx-auto my-4 shadow rounded-lg">
+            <p><strong>Bước 3: Nhận link test trong vòng 24h</strong><br>Dành 30 phút, trong không gian yên tĩnh để làm
+              bài test.</p>
+            <p class="text-sm text-gray-600 italic">Lưu ý: Tin tưởng và làm bài test như hướng dẫn, không phân tâm,
+              không lo đúng sai.</p>
+            <p><strong>Bước 4: Nhận liền kết quả bài test</strong><br>Gửi kết quả về cho Coach qua Zalo.</p>
+            <p><strong>Bước 5: Đặt hẹn & tham gia</strong><br>Nếu thay đổi, vui lòng báo trước Coach ít nhất 24h.</p>
+            <p><strong>Bước 6: Đồng hành cá nhân hóa</strong><br>Coach Moon tiếp tục follow-up 1:1 trong suốt hành
+              trình.</p>
+            <p class="text-pink-700 font-semibold">🌟 Hãy tin rằng bạn chính là ngọn hải đăng của chính mình!</p>
+          </div>
+        </div>
+
+        <form method="post" id="contactForm"
+          class="bg-gradient-to-br from-purple-100 via-[#ECAAC2] to-white p-8 rounded-lg shadow-lg space-y-6"
+          action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
+
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center">ĐĂNG KÝ DỊCH VỤ</h3>
+
+          <div class="relative">
+            <input name="name" id="name" type="text" placeholder="Họ và tên" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="email" id="email" type="email" placeholder="Email" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="your-job" id="your-job" placeholder="Công việc hiện tại" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <div class="relative">
+            <input name="your-coach" id="your-coach" placeholder="Dịch vụ bạn quan tâm" required
+              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-pink-700 transition duration-300">
+            Đăng ký
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-gradient-to-b from-white via-[#F8EDFF] to-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold mb-16" style="color: #E0B0FF;">
+        LỘ TRÌNH 6 BƯỚC CHÚNG TA SẼ ĐỒNG HÀNH CÙNG NHAU
+      </h2>
+
+      <div class="relative">
+        <!-- Carousel -->
+        <div class="flex overflow-hidden">
+          <div class="flex transition-transform duration-500" id="carouselSlides">
+            <!-- Group 1 (Bước 1, Bước 2, Bước 3) -->
+            <div class="flex space-x-4">
+              <div class="flex flex-col items-center w-1/3">
+                <img src="img/6steps/step1.png" alt="Bước 1" class="w-full object-cover rounded-2xl shadow-lg">
+              </div>
+              <div class="flex flex-col items-center w-1/3">
+                <img src="img/6steps/step2.png" alt="Bước 2" class="w-full object-cover rounded-2xl shadow-lg">
+              </div>
+              <div class="flex flex-col items-center w-1/3">
+                <img src="img/6steps/step3.png" alt="Bước 3" class="w-full object-cover rounded-2xl shadow-lg">
+              </div>
+            </div>
+
+            <!-- Group 2 (Bước 4, Bước 5, Bước 6) -->
+            <div class="flex space-x-4">
+              <div class="flex flex-col items-center w-1/3">
+                <img src="img/6steps/step4.png" alt="Bước 4" class="w-full object-cover rounded-2xl shadow-lg">
+              </div>
+              <div class="flex flex-col items-center w-1/3">
+                <img src="img/6steps/step5.png" alt="Bước 5" class="w-full object-cover rounded-2xl shadow-lg">
+              </div>
+              <div class="flex flex-col items-center w-1/3">
+                <img src="img/6steps/step6.png" alt="Bước 6" class="w-full object-cover rounded-2xl shadow-lg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="absolute inset-y-0 left-0 flex items-center">
+          <button id="prevBtnSteps"
+            class="bg-purple-500 text-white p-2 rounded-full shadow-md hover:bg-purple-600 focus:outline-none">
+            ←
+          </button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center">
+          <button id="nextBtnSteps"
+            class="bg-purple-500 text-white p-2 rounded-full shadow-md hover:bg-purple-600 focus:outline-none">
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <section id="" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">
@@ -185,7 +652,7 @@
       </div>
 
       <div class="text-center mt-8">
-        <a href="ebook.html"
+        <a href="#ebook-register"
           class="border border-[#E0B0FF] px-4 py-2 rounded-lg text-white bg-[#E0B0FF] hover:bg-[#D08DFF] transition">NHẬN
           EBOOK</a>
       </div>
@@ -548,499 +1015,25 @@
       </div>
   </section>
 
-  <section id="dichvu" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">
-        CÁC DỊCH VỤ KHAI VẤN
-      </h3>
-      <div class="relative py-6">
-        <button id="prevBtnProducts"
-          class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
-          ◀
-        </button>
-  
-        <div id="sliderProducts" class="flex overflow-x-auto no-scrollbar space-x-6 scroll-smooth justify-center">
-          <!-- Service Item 1 -->
-          <div class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-            <div class="relative">
-              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <img src="img/banner dichvu/1.jpg" class="w-full h-[180px] sm:h-[220px] md:h-[250px] object-cover" />
-                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
-                  9.900.000 VNĐ
-                </div>
-              </a>
-            </div>
-            <div class="p-4 bg-white">
-              <h4 class="font-bold text-lg sm:text-xl">Bản đồ cuộc đời</h4>
-              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
-              <div class="flex items-center text-yellow-500">
-                ★★★★★ (5)
-              </div>
-              <div class="flex justify-between items-center mt-3">
-                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
-                  Đăng ký ngay
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-            <div class="relative">
-              <a href="https://drive.google.com/file/d/173H4a0sdhVhfaqoQ9UZWgbKKsgILgTfT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <img src="img/banner dichvu/2.jpg" class="w-full h-[180px] sm:h-[220px] md:h-[250px] object-cover" />
-                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
-                  6.000.000 VNĐ
-                </div>
-              </a>
-            </div>
-            <div class="p-4 bg-white">
-              <h4 class="font-bold text-lg sm:text-xl">La bàn sự nghiệp</h4>
-              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
-              <div class="flex items-center text-yellow-500">
-                ★★★★★ (5)
-              </div>
-              <div class="flex justify-between items-center mt-3">
-                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
-                  Đăng ký ngay
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-            <div class="relative">
-              <a href="https://drive.google.com/file/d/1PvictYiOTgDO0zNbfTKyBgCHhLbA60-w/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <img src="img/banner dichvu/3.jpg" class="w-full h-[180px] sm:h-[220px] md:h-[250px] object-cover" />
-                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
-                  9.900.000 VNĐ
-                </div>
-              </a>
-            </div>
-            <div class="p-4 bg-white">
-              <h4 class="font-bold text-lg sm:text-xl">Hiểu con từ gốc</h4>
-              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
-              <div class="flex items-center text-yellow-500">
-                ★★★★★ (5)
-              </div>
-              <div class="flex justify-between items-center mt-3">
-                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
-                  Đăng ký ngay
-                </button>
-              </div>
-            </div>
-          </div>
-  
-          <div class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-            <div class="relative">
-              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <img src="" class="w-full h-[180px] sm:h-[220px] md:h-[250px] object-cover" />
-                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
-                  VNĐ
-                </div>
-              </a>
-            </div>
-            <div class="p-4 bg-white">
-              <h4 class="font-bold text-lg sm:text-xl">Hãy đón chờ</h4>
-              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
-              <div class="flex items-center text-yellow-500">
-                ★★★★★ (5)
-              </div>
-              <div class="flex justify-between items-center mt-3">
-                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
-                  Đăng ký ngay
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-            <div class="relative">
-              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <img src="" class="w-full h-[180px] sm:h-[220px] md:h-[250px] object-cover" />
-                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
-                  VNĐ
-                </div>
-              </a>
-            </div>
-            <div class="p-4 bg-white">
-              <h4 class="font-bold text-lg sm:text-xl">Hãy đón chờ</h4>
-              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
-              <div class="flex items-center text-yellow-500">
-                ★★★★★ (5)
-              </div>
-              <div class="flex justify-between items-center mt-3">
-                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
-                  Đăng ký ngay
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="min-w-[85%] sm:min-w-[45%] md:min-w-[33.3333%] flex-shrink-0 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-            <div class="relative">
-              <a href="https://drive.google.com/file/d/1clmPVJhR_7UyTrXvTyvhh-EQCk3ZcutF/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <img src="" class="w-full h-[180px] sm:h-[220px] md:h-[250px] object-cover" />
-                <div class="absolute bottom-4 right-4 text-xl font-bold text-white bg-black bg-opacity-50 p-2 rounded">
-                  VNĐ
-                </div>
-              </a>
-            </div>
-            <div class="p-4 bg-white">
-              <h4 class="font-bold text-lg sm:text-xl">Hãy đón chờ</h4>
-              <p class="text-sm sm:text-base text-gray-600">Giảng viên: Coach Moon</p>
-              <div class="flex items-center text-yellow-500">
-                ★★★★★ (5)
-              </div>
-              <div class="flex justify-between items-center mt-3">
-                <button onclick="document.getElementById('formDangKy').scrollIntoView({ behavior: 'smooth' })"
-                  class="bg-[#93AECA] text-white py-2 px-4 rounded w-full hover:bg-[#BED1E3] transition">
-                  Đăng ký ngay
-                </button>
-              </div>
-            </div>
-          </div>
-
-  
-        </div>
-  
-        <button id="nextBtnProducts"
-          class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full shadow-lg z-10 hover:bg-[#EEBFD1] transition duration-300">
-          ▶
-        </button>
-      </div>
-    </div>
-  </section>
-  
-  <style>
-    @media (max-width: 768px) {
-      #sliderProducts {
-        flex-direction: column; /* Switch to vertical layout on mobile */
-        align-items: center; /* Center align items on mobile */
-      }
-      .min-w-[85%], .sm:min-w-[45%], .md:min-w-[33.3333%] {
-        min-width: 100%; /* Ensure each item takes full width on mobile */
-        margin-bottom: 16px; /* Add some space between items */
-      }
-    }
-  
-    @media (min-width: 769px) {
-      #sliderProducts {
-        flex-direction: row; /* Default horizontal layout on desktop */
-        align-items: flex-start; /* Align to the start */
-      }
-      .min-w-[85%], .sm:min-w-[45%], .md:min-w-[33.3333%] {
-        min-width: 33.3333%; /* Keep 3 items per row on desktop */
-      }
-    }
-  </style>
-  
-
-
-
-  
-  <!-- Đăng ký-->
-  <!-- cần thay đường link appscript của gg sheet của khách hàng -->
-  <section id="submitform" class="py-20 bg-white bg-gradient-to-br from-[#EEBFD1] via-white to-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">ĐẶT LỊCH TƯ VẤN MIỄN PHÍ 30 PHÚT CÙNG COACHMOON
-      </h3>
-
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="space-y-6">
-          <p><strong>Một hành trình khai mở để bạn sống và làm việc rực rỡ từ chính bản thể của mình.</strong></p>
-          <p><em>"Sống rực rỡ không bắt đầu bằng thay đổi bên ngoài, mà từ việc hiểu mình là ai."</em></p>
-          <p></p>Trong buổi tư vấn cá nhân 30 phút cùng Coach Moon – Nhà khai vấn quốc tế với hơn 22 năm kinh nghiệm
-          phát triển con người – bạn sẽ:
-          <p></p>✔️ Được lắng nghe và thấu hiểu từ góc nhìn khách quan
-          <p></p>✔️ Nhìn rõ hơn những điều đang cản trở bạn tiến lên
-          <p></p>✔️ Nhận định hướng hoặc đề xuất bước đi phù hợp với mục tiêu hiện tại
-          <p><strong>Giá trị buổi tư vấn: 3.000.000đ</strong>
-          <p><strong>Hiện đang được tư vấn miễn phí trong lần đầu tiên bạn ghé thăm website – chỉ dành cho những ai sẵn
-              sàng bắt
-              đầu hành trình thay đổi.</strong>
-          <p>Coach Moon sẽ đồng hành cùng bạn bằng sự tận tâm và tử tế, tạo nên một không gian đủ an toàn để bạn lắng
-            nghe bản thân rõ hơn.
-          <p><strong>👉 Đăng ký ngay hôm nay để giữ chỗ và bắt đầu hành trình trở về với chính mình.</strong>
-        </div>
-
-        <!-- Form -->
-        <form method="post" id="contactForm"
-          class="bg-gradient-to-br from-purple-100 via-[#ECAAC2] to-white p-8 rounded-lg shadow-lg space-y-6"
-          action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
-
-          <div class="relative">
-            <input name="name" id="name" type="text" placeholder="Họ và tên" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="email" id="email" type="email" placeholder="Email" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="your-job" id="your-job" placeholder="Công việc hiện tại" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="your-coach" id="your-coach" placeholder="Dịch vụ bạn quan tâm" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <button type="submit"
-            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-[#BED1E3] transition duration-300">
-            Đặt lịch
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="register-service" class="py-20 bg-gradient-to-br from-white via-pink-50 to-white">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <h2 class="text-3xl font-bold text-center text-pink-600 mb-12" style="color: #E0B0FF;">
-        QUY TRÌNH ĐĂNG KÝ DỊCH VỤ KHAI VẤN
-      </h2>
-
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <div class="space-y-6 text-gray-800 text-[17px]">
-          <div class="space-y-4">
-            <p><strong>Bước 1: Đăng ký</strong><br>Điền đầy đủ thông tin vào form bên phải.</p>
-            <p><strong>Bước 2: Thanh toán</strong><br>Chuyển khoản phí dịch vụ, chụp màn hình xác nhận gửi qua Zalo
-              Coach MoonPham và nhận email xác nhận.<br></p>
-            <img src="img/STK.jpg" alt="QR chuyển khoản" class="w-60 mx-auto my-4 shadow rounded-lg">
-            <p><strong>Bước 3: Nhận link test trong vòng 24h</strong><br>Dành 30 phút, trong không gian yên tĩnh để làm
-              bài test.</p>
-            <p class="text-sm text-gray-600 italic">Lưu ý: Tin tưởng và làm bài test như hướng dẫn, không phân tâm,
-              không lo đúng sai.</p>
-            <p><strong>Bước 4: Nhận liền kết quả bài test</strong><br>Gửi kết quả về cho Coach qua Zalo.</p>
-            <p><strong>Bước 5: Đặt hẹn & tham gia</strong><br>Nếu thay đổi, vui lòng báo trước Coach ít nhất 24h.</p>
-            <p><strong>Bước 6: Đồng hành cá nhân hóa</strong><br>Coach Moon tiếp tục follow-up 1:1 trong suốt hành
-              trình.</p>
-            <p class="text-pink-700 font-semibold">🌟 Hãy tin rằng bạn chính là ngọn hải đăng của chính mình!</p>
-          </div>
-        </div>
-
-        <form method="post" id="contactForm"
-          class="bg-gradient-to-br from-purple-100 via-[#ECAAC2] to-white p-8 rounded-lg shadow-lg space-y-6"
-          action="https://script.google.com/macros/s/AKfycbwYDtonpBn44Ja6Xf-ysNlm9-0cW4hEptli9C4f4NDJX1-P13DXunZ4VSQTnhqMhBwxwQ/exec">
-
-          <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center">ĐĂNG KÝ DỊCH VỤ</h3>
-
-          <div class="relative">
-            <input name="name" id="name" type="text" placeholder="Họ và tên" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="email" id="email" type="email" placeholder="Email" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="phone" id="phone" type="tel" placeholder="Số điện thoại" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="your-job" id="your-job" placeholder="Công việc hiện tại" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <div class="relative">
-            <input name="your-coach" id="your-coach" placeholder="Dịch vụ bạn quan tâm" required
-              class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" />
-            <span class="absolute top-0 right-0 text-red-500 text-xl">*</span>
-          </div>
-
-          <button type="submit"
-            class="w-full bg-gradient-to-r from-pink-600 to-pink-500 text-white py-3 rounded hover:bg-pink-700 transition duration-300">
-            Đăng ký
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="py-20 bg-gradient-to-b from-white via-[#F8EDFF] to-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-4xl font-bold mb-16" style="color: #E0B0FF;">
-        LỘ TRÌNH 6 BƯỚC CHÚNG TA SẼ ĐỒNG HÀNH CÙNG NHAU
-      </h2>
-
-      <div class="space-y-12">
-        <div class="flex flex-col items-center">
-          <img src="img/6steps/step1.png" alt="Bước 1" class="w-10/12 object-cover rounded-2xl shadow-lg mb-4">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="img/6steps/step2.png" alt="Bước 2" class="w-10/12 object-cover rounded-2xl shadow-lg mb-4">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="img/6steps/step3.png" alt="Bước 3" class="w-10/12 object-cover rounded-2xl shadow-lg mb-4">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="img/6steps/step4.png" alt="Bước 4" class="w-10/12 object-cover rounded-2xl shadow-lg mb-4">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="img/6steps/step5.png" alt="Bước 5" class="w-10/12 object-cover rounded-2xl shadow-lg mb-4">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="img/6steps/step6.png" alt="Bước 6" class="w-10/12 object-cover rounded-2xl shadow-lg mb-4">
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <section id="subjects" class="py-20 bg-gradient-to-br from-[#EEBFD1] via-white to-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <!-- Tiêu đề -->
-      <h2 class="text-3xl font-bold mb-6">DÀNH CHO NHỮNG NGƯỜI ĐANG Ở NGÃ BA CUỘC ĐỜI...</h2>
-      <p class="text-lg text-gray-700 mb-12">
-        Bạn khao khát sống đúng với giá trị thật của mình – không chỉ <strong>sống giỏi</strong>, mà còn muốn
-        <strong>sống đúng – sống sâu – sống tự do</strong>.
-      </p>
-
-      <div class="space-y-6 text-left">
-        <div class="flex items-start gap-4">
-          <div class="text-pink-500 text-xl">➤</div>
-          <p class="text-gray-800">Bạn là <strong>freelancer, coach</strong> hoặc <strong>chuyên gia tư vấn</strong>
-            trong lĩnh vực riêng của mình.</p>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="text-pink-500 text-xl">➤</div>
-          <p class="text-gray-800">Bạn đang <strong>kinh doanh nhỏ lẻ</strong>, online hoặc truyền thống và tìm kiếm
-            định hướng phát triển mới.</p>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="text-pink-500 text-xl">➤</div>
-          <p class="text-gray-800">Bạn là <strong>founder – chủ doanh nghiệp nhỏ & vừa</strong>, đang xây dựng thương
-            hiệu cá nhân bền vững.</p>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="text-pink-500 text-xl">➤</div>
-          <p class="text-gray-800">Bạn là <strong>chuyên viên, quản lý</strong> từng đi làm thuê 3–5 năm trở lên, đang
-            cảm thấy hoang mang hoặc mất kết nối với công việc.</p>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="text-pink-500 text-xl">➤</div>
-          <p class="text-gray-800">Bạn từng <strong>mạnh mẽ, độc lập</strong>… nhưng giờ cảm thấy trống rỗng và cần một
-            hướng đi mới trong cuộc đời.</p>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="text-pink-500 text-xl">➤</div>
-          <p class="text-gray-800">Bạn quan tâm đến sự phát triển của con cái (13–18 tuổi) – đang ở lứa tuổi cần định
-            hướng sự nghiệp, và bạn nhận ra rằng: <em>“Muốn đồng hành đúng với con, mình phải hiểu rõ bản thân
-              trước.”</em></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-[#A678F8] mb-12">
-        TÌM HIỂU 3 CÔNG CỤ CHUYÊN SÂU
-      </h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <!-- Tool 1 -->
-        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
-          <div class="h-56 bg-gray-100 flex items-center justify-center">
-            <img src="img/img_tools/2.jpg" alt="Sinh trắc học vân tay" class="max-h-full max-w-full object-contain" />
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#A678F8]">Sinh Trắc Học Vân Tay</h3>
-            <p class="text-gray-700">
-              Sinh trắc vân tay là ngành khoa học nghiên cứu về mối liên hệ giữa cấu trúc bộ não,
-              sự phân bổ các nơron thần kinh với vân tay của con người. Thông qua đó, có thể xác định
-              những khả năng thiên bẩm của từng cá nhân.
-            </p>
-          </div>
-        </div>
-
-        <!-- Tool 2 -->
-        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
-          <div class="h-56 bg-gray-100 flex items-center justify-center">
-            <img src="img/img_tools/4.jpg" alt="Công cụ DISC" class="max-h-full max-w-full object-contain" />
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#A678F8]">Công Cụ DISC</h3>
-            <p class="text-gray-700">
-              DISC là mô hình phân tích hành vi, giúp đo lường và xác định mức độ của các đặc điểm
-              tính cách thông qua 4 phong cách: Chi phối, Ảnh hưởng, Kiên định và Tận tâm.
-            </p>
-          </div>
-        </div>
-
-        <!-- Tool 3 -->
-        <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
-          <div class="h-56 bg-gray-100 flex items-center justify-center">
-            <img src="img/img_tools/Motivators.jpg" alt="Công cụ Motivators"
-              class="max-h-full max-w-full object-contain" />
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#A678F8]">Công Cụ Motivators</h3>
-            <p class="text-gray-700">
-              Motivators đo lường các yếu tố thúc đẩy hành vi của một cá nhân, tập trung vào 7 khía
-              cạnh động lực chính: Thẩm mỹ, Kinh tế, Cá nhân, Quyền lực, Vị tha, Quy tắc và Lý thuyết.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NHÓM 1 -->
+  <!-- FAQ Section -->
   <section id="faq" class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-12">CÂU HỎI THƯỜNG GẶP</h2>
-      <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">NHÓM 1: VỀ QUY TRÌNH & HIỆU QUẢ COACHING
-      </h2>
+      <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">VỀ QUY TRÌNH & HIỆU QUẢ COACHING</h2>
       <div class="space-y-8 text-gray-800 text-lg">
-        <div class="border-b pb-4">
+        <!-- Nhóm 1 -->
+        <div class="pb-4">
           <p class="font-semibold text-xl">1. Coaching là gì? Tôi chưa từng trải nghiệm – liệu có phù hợp?</p>
           <p class="faq-answer hidden">
             Coaching không phải tư vấn hay trị liệu. Đây là một hành trình giúp bạn nhìn lại chính mình, kết nối sâu với
             bản thể,
-            từ đó đưa ra những lựa chọn phù hợp với giá trị sống. Hơn 80% khách hàng của
-            Coach Moon là người lần đầu trải nghiệm coaching – và họ đều chia sẻ rằng “giá như mình được làm điều này
-            sớm hơn”.
+            từ đó đưa ra những lựa chọn phù hợp với giá trị sống. Hơn 80% khách hàng của Coach Moon là người lần đầu
+            trải nghiệm coaching – và họ đều chia sẻ rằng “giá như mình được làm điều này sớm hơn”.
           </p>
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">2. Liệu chỉ 2 buổi có đủ để tạo ra sự khác biệt lớn?</p>
           <p class="faq-answer hidden">
             Đủ để bạn "nhìn lại – nhìn sâu – và nhìn rõ". Hai buổi coaching không đơn thuần là trò chuyện,
@@ -1051,7 +1044,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">3. Tôi đang rất bận, liệu có thể sắp xếp linh hoạt thời gian không?</p>
           <p class="faq-answer hidden">
             Có. Bạn chỉ cần 90 phút mỗi buổi, linh hoạt vào buổi tối hoặc cuối tuần. Toàn bộ tài liệu sẽ được
@@ -1060,16 +1053,10 @@
           </p>
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- NHÓM 2 -->
-  <section id="faq" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">NHÓM 2: VỀ GIÁ TRỊ & CAM KẾT</h2>
-      <div class="space-y-8 text-gray-800 text-lg">
-        <div class="border-b pb-4">
+        <!-- Nhóm 2 -->
+        <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">VỀ GIÁ TRỊ & CAM KẾT</h2>
+        <div class="pb-4">
           <p class="font-semibold text-xl">4. Giá gói khá cao – có đáng để đầu tư không?</p>
           <p class="faq-answer hidden">
             Gói không chỉ là vài bài test – mà là bước chuyển sâu sắc để bạn tái kết nối với chính mình
@@ -1079,7 +1066,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">5. Nếu tôi không hài lòng thì sao?</p>
           <p class="faq-answer hidden">
             Coach Moon cam kết hoàn 50% nếu sau buổi đầu tiên bạn không cảm thấy phù hợp.
@@ -1088,7 +1075,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">6. Có hỗ trợ trả góp hoặc ưu đãi không?</p>
           <p class="faq-answer hidden">
             Hiện đang có ưu đãi dành cho 100 khách hàng đầu tiên.
@@ -1096,18 +1083,10 @@
           </p>
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- NHÓM 3 -->
-  <section id="faq" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">NHÓM 3: VỀ BÀI TEST & TÍNH CÁ NHÂN HÓA
-      </h2>
-      <div class="space-y-8 text-gray-800 text-lg">
-
-        <div class="border-b pb-4">
+        <!-- Nhóm 3 -->
+        <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">VỀ BÀI TEST & TÍNH CÁ NHÂN HÓA</h2>
+        <div class="pb-4">
           <p class="font-semibold text-xl">7. Tôi từng làm DISC hoặc Sinh trắc – lần này có gì khác biệt?</p>
           <p class="faq-answer hidden">
             Khác biệt nằm ở cách giải mã và kết nối thông tin. Coach Moon không chỉ “đọc kết quả”,
@@ -1117,7 +1096,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">8. Tôi nên chọn 2 bài test hay 3 bài?</p>
           <p class="faq-answer hidden">
             <br>● 2 bài: Phù hợp nếu bạn muốn ra quyết định nhanh, đang cần định hướng nghề nghiệp cụ thể</br>
@@ -1126,7 +1105,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">9. Kết quả test có đáng tin không?</p>
           <p class="faq-answer hidden">
             Các bài đánh giá (DISC, Motivators, Sinh trắc học) đều được sử dụng rộng rãi trong môi trường doanh nghiệp
@@ -1136,16 +1115,10 @@
           </p>
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- NHÓM 4 -->
-  <section id="faq" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">NHÓM 4: VỀ GÓI “HIỂU CON TỪ GỐC”</h2>
-      <div class="space-y-8 text-gray-800 text-lg">
-        <div class="border-b pb-4">
+        <!-- Nhóm 4 -->
+        <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">VỀ GÓI “HIỂU CON TỪ GỐC”</h2>
+        <div class="pb-4">
           <p class="font-semibold text-xl">10. Con tôi đang tuổi dậy thì, nổi loạn, liệu có phù hợp?</p>
           <p class="faq-answer hidden">
             Giai đoạn dậy thì chính là thời điểm vàng để hiểu con đúng và xây dựng kết nối lâu dài.
@@ -1155,7 +1128,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">11. Mẹ làm test thay con có chính xác không?</p>
           <p class="faq-answer hidden">
             Với trẻ nhỏ, mẹ có thể làm bài quan sát. Tuy nhiên, với lứa tuổi 13–18, nên để con trực tiếp làm bài DISC
@@ -1165,7 +1138,7 @@
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
 
-        <div class="border-b pb-4">
+        <div class="pb-4">
           <p class="font-semibold text-xl">12. Tôi muốn tặng chương trình này cho người thân – có được không?</p>
           <p class="faq-answer hidden">
             Được. Bạn sẽ nhận một e-Gift Card thiết kế riêng, có thể in hoặc gửi qua email/Zalo – tinh tế,
@@ -1174,39 +1147,15 @@
           </p>
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- NHÓM 5 -->
-  <section id="faq" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">NHÓM 5: VỀ ĐĂNG KÝ VÀ HỖ TRỢ</h2>
-      <div class="space-y-8 text-gray-800 text-lg">
-        <div class="border-b pb-4">
-          <p class="font-semibold text-xl">13. Làm sao để đăng ký nhanh?</p>
+        <!-- Nhóm 5 -->
+        <h2 class="text-3xl font-bold text-center mb-12" style="color: #E0B0FF;">VỀ CHÍNH SÁCH HOÀN TIỀN</h2>
+        <div class="pb-4">
+          <p class="font-semibold text-xl">13. Làm sao để tôi được hoàn tiền nếu không hài lòng?</p>
           <p class="faq-answer hidden">
-            Bạn có thể nhắn tin trực tiếp qua Zalo hoặc Fanpage Coach Moon.
-            Đội ngũ hỗ trợ sẽ hướng dẫn chọn gói,
-            lịch phù hợp và gửi hướng dẫn chi tiết.
-          </p>
-          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
-        </div>
-
-        <div class="border-b pb-4">
-          <p class="font-semibold text-xl">14. Sau 2 buổi coaching, tôi có được hỗ trợ thêm không?</p>
-          <p class="faq-answer hidden">
-            Bạn sẽ được hỗ trợ follow-up 1 lần (qua email hoặc tin nhắn) để đảm bảo bạn ứng dụng được bản đồ hành động.
-            Nếu cần, bạn có thể tiếp tục nâng cấp sang gói đồng hành 3–6 tháng.
-          </p>
-          <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
-        </div>
-
-        <div class="border-b pb-4">
-          <p class="font-semibold text-xl">15. Tôi vẫn chưa chắc mình nên chọn gói nào – có ai hỗ trợ tôi không?</p>
-          <p class="faq-answer hidden">
-            Có. Bạn có thể đặt lịch tư vấn 30 phút miễn phí cùng Coach Moon hoặc trợ lý,
-            để được gợi ý gói phù hợp nhất với tình trạng hiện tại (bản thân – sự nghiệp – con cái).
+            Coach Moon cam kết hoàn 50% chi phí nếu sau buổi coaching đầu tiên bạn không cảm thấy hài lòng hoặc thấy
+            không
+            phù hợp.
           </p>
           <button onclick="toggleFAQ(this)" class="text-pink-600 mt-2 underline text-sm">Xem thêm</button>
         </div>
@@ -1214,137 +1163,64 @@
     </div>
   </section>
 
+  <section class="bg-white py-16 px-4 md:px-8">
+    <section id="ebook-register" class="py-20 bg-gradient-to-br from-white via-purple-50 to-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-purple-600 mb-12" style="color:#E0B0FF;">
+          NHẬN EBOOK
+        </h2>
 
-  <footer id="footer" class="bg-gray-800 text-white py-10 text-center">
-    <p>&copy; Coachmoon</p>
-  </footer>
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div class="space-y-6 text-gray-800 text-[17px]">
+            <p class="font-semibold text-purple-700">
+              Nhận ngay Ebook miễn phí để định hướng đúng đắn và vững vàng hơn trên hành trình sự nghiệp của bạn!
+            </p>
+          </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const header = document.getElementById("header");
-      const bannerSection = document.querySelector("section");
+          <form method="post" id="ebookForm"
+            class="bg-gradient-to-br from-purple-100 via-[#EFD9FA] to-white p-8 rounded-lg shadow-lg space-y-6"
+            action="https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_URL/exec">
 
-      // Kiểm tra kích thước màn hình, chỉ áp dụng với mobile
-      const isMobile = window.innerWidth < 768;
+            <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center">ĐĂNG KÝ NHẬN EBOOK</h3>
 
-      if (header && bannerSection && isMobile) {
-        const headerHeight = header.offsetHeight;
-        bannerSection.style.paddingTop = `${headerHeight}px`;
-      }
-    });
-  </script>
+            <div class="relative">
+              <input name="name" type="text" placeholder="Họ và tên" required
+                class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+            </div>
 
+            <div class="relative">
+              <input name="email" type="email" placeholder="Email" required
+                class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+            </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const slider = document.getElementById('slider');
-      const nextBtn = document.getElementById('nextBtn');
-      const prevBtn = document.getElementById('prevBtn');
+            <button type="submit"
+              class="w-full bg-gradient-to-r from-purple-600 to-purple-500 text-white py-3 rounded hover:from-purple-700 transition duration-300">
+              Nhận Ebook miễn phí
+            </button>
 
-      const scrollAmount = slider.offsetWidth / 2;
+            <p id="form-success" class="text-green-600 text-center hidden mt-2">✅ Ebook đã được gửi! Hãy kiểm tra email
+              của bạn nhé.</p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-      let autoSlideInterval;
+    <div class="fixed bottom-24 md:bottom-6 right-6 z-50 space-y-3">
+      <a href="https://m.me/yourusername" target="_blank"
+        class="block w-14 h-14 bg-white-600 rounded-full shadow-lg hover:scale-110 transition transform duration-300 flex items-center justify-center">
+        <img src="img/icon/mess.png" alt="Messenger" class="w-7 h-7">
+      </a>
+      <a href="https://zalo.me/84903885044" target="_blank"
+        class="block w-14 h-14 bg-white-600 rounded-full shadow-lg hover:scale-110 transition transform duration-300 flex items-center justify-center">
+        <img src="img/icon/zalo.png" alt="Zalo" class="w-7 h-7">
+      </a>
+    </div>
 
-      function scrollToNext() {
+    <footer id="footer" class="bg-gray-800 text-white py-10 text-center absolute w-full">
+      <p>&copy; Coachmoon</p>
+    </footer>
 
-        if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
-          slider.scrollLeft = 0;
-        } else {
-          slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        }
-      }
-
-      nextBtn.addEventListener('click', () => {
-        scrollToNext();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        if (slider.scrollLeft === 0) {
-          slider.scrollLeft = slider.scrollWidth - slider.offsetWidth;
-        } else {
-          slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        }
-      });
-
-      function startAutoSlide() {
-        autoSlideInterval = setInterval(scrollToNext, 5000); //5 giây chuyển hình 
-      }
-
-      slider.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
-      });
-
-      slider.addEventListener('mouseleave', () => {
-        startAutoSlide();
-      });
-
-      startAutoSlide();
-    });
-  </script>
-  <script>
-    const openBtn = document.getElementById("openVideoBtn");
-    const closeBtn = document.getElementById("closeVideoBtn");
-    const modal = document.getElementById("videoModal");
-
-    openBtn.addEventListener("click", () => {
-      modal.classList.remove("hidden");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.classList.add("hidden");
-      const iframe = modal.querySelector("iframe");
-      const src = iframe.src;
-      iframe.src = src; // reset lại video
-    });
-  </script>
-
-  <script>
-    function toggleText(btn) {
-      const card = btn.closest('.flex-col');
-      const shortText = card.querySelector('.short-text');
-      const fullText = card.querySelector('.full-text');
-
-      const isHidden = fullText.classList.contains('hidden');
-      if (isHidden) {
-        shortText.classList.add('hidden');
-        fullText.classList.remove('hidden');
-        btn.textContent = 'Thu gọn';
-      } else {
-        shortText.classList.remove('hidden');
-        fullText.classList.add('hidden');
-        btn.textContent = 'Đọc thêm';
-      }
-    }
-  </script>
-  <!-- slider products -->
-  <script>
-    const slider = document.getElementById('sliderProducts');
-    const prev = document.getElementById('prevBtnProducts');
-    const next = document.getElementById('nextBtnProducts');
-
-    prev.addEventListener('click', () => {
-      slider.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-
-    next.addEventListener('click', () => {
-      slider.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-  </script>
-
-  <script>
-    function toggleFAQ(button) {
-      const answer = button.previousElementSibling;
-      const isHidden = answer.classList.contains('hidden');
-      if (isHidden) {
-        answer.classList.remove('hidden');
-        button.textContent = 'Thu gọn';
-      } else {
-        answer.classList.add('hidden');
-        button.textContent = 'Xem thêm';
-      }
-    }
-  </script>
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>
