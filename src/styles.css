@@ -51,3 +51,33 @@
     min-width: 33.3333%; /* Đảm bảo 3 item mỗi hàng trên desktop */
   }
 }
+
+#header {
+  transition: transform 0.3s ease-in-out;
+  position: fixed; /* hoặc sticky tùy bạn */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+html, body {
+  overflow-x: hidden; /* Ngăn cuộn ngang */
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+iframe,
+img,
+section,
+.w-full {
+  max-width: 100%;
+}
+
+/* Tránh ảnh / iframe bị tràn */
+iframe {
+  display: block;
+}

@@ -78,10 +78,31 @@ if (slider && next && prev) {
 const header = document.getElementById('header');
 const bannerSection = document.querySelector("section");
 const isMobile = window.innerWidth < 768;
+
 if (header && bannerSection && isMobile) {
-    const headerHeight = header.offsetHeight;
-    bannerSection.style.paddingTop = `${headerHeight}px`;
+  const headerHeight = header.offsetHeight;
+  bannerSection.style.paddingTop = `${headerHeight}px`;
 }
+
+// ---------------- HIDE HEADER ON SCROLL DOWN, SHOW ON SCROLL UP ----------------
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function () {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (!header) return;
+
+  if (currentScroll > lastScrollTop) {
+    // Cuộn xuống → ẩn header
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    // Cuộn lên → hiện lại header
+    header.style.transform = 'translateY(0)';
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
 
 // ---------------- VIDEO BUTTON OPEN/CLOSE ----------------
 const openBtn = document.getElementById("openVideoBtn");
