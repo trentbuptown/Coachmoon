@@ -169,7 +169,7 @@ window.toggleFAQ = (button) => {
     }
 };
 // gửi mail
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyla1chk-6JulbjOaKo2qtWtgCL2OVX16u7FOWL2Q8FeRsBF7N2UALoDffR3p_JguHIew/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbymcVjYfI6DiPGKzQAnt7_dlIQuLREakSm1JQGa-daVZNRh7e3D-NJqhZfunQ0R_4nt6w/exec';
 const form = document.getElementById('contactForm');
 const toast = document.getElementById('toast');
 
@@ -198,3 +198,36 @@ function showToast() {
       toast.classList.remove('opacity-100');
     }, 4000);
   }
+
+//   E_BOOK
+const scriptURLebook = 'https://script.google.com/macros/s/AKfycbzLASIfp13HRc56Fx2cuLUe1E8-fHl0plrovbkGp9qsQdGUeHJv_fnzRCsSaEyShI-8/exec';
+const forme = document.getElementById('contactFormEbook');
+const toaste = document.getElementById('toastEbookEbook');
+
+if (forme) {
+  forme.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(forme);
+
+    fetch(scriptURLebook, { method: 'POST', body: formData })
+      .then(response => {
+        forme.reset();
+        showToastEbook();
+      })
+      .catch(error => {
+        alert('Gửi thất bại. Vui lòng thử lại sau.');
+        console.error('Error!', error.message);
+      });
+  });
+
+  function showToastEbook() {
+    toaste.classList.remove('opacity-0', 'pointer-events-none');
+    toaste.classList.add('opacity-100');
+
+    setTimeout(() => {
+      toaste.classList.add('opacity-0', 'pointer-events-none');
+      toaste.classList.remove('opacity-100');
+    }, 4000);
+  }
+}
+
