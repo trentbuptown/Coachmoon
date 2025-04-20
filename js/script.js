@@ -147,3 +147,33 @@ window.toggleFAQ = (button) => {
         button.textContent = 'Xem thêm';
     }
 };
+// gửi mail
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyla1chk-6JulbjOaKo2qtWtgCL2OVX16u7FOWL2Q8FeRsBF7N2UALoDffR3p_JguHIew/exec';
+const form = document.getElementById('contactForm');
+const toast = document.getElementById('toast');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => {
+      form.reset();
+      showToast();
+    })
+    .catch(error => {
+      alert('Gửi thất bại. Vui lòng thử lại sau.');
+      console.error('Error!', error.message);
+    });
+});
+
+function showToast() {
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+  
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none');
+      toast.classList.remove('opacity-100');
+    }, 4000);
+  }
