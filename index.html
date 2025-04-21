@@ -530,7 +530,9 @@
             class="w-full bg-gradient-to-r from-[var(--pink-600)] to-[var(--pink-500)] text-[var(--white)] py-3 rounded  hover:from-[var(--pink-700)] hover:to-[var(--pink-600)] transition duration-300">
             Đăng ký
           </button>
-
+          <div id="loadingSpinner" class="hidden flex justify-center">
+            <div class="animate-spin rounded-full h-8 w-8 border-t-4 border-[var(--purple-600)] border-opacity-30"></div>
+          </div>
           <div id="toast"
             class="fixed inset-0 flex items-center justify-center bg-[var(--black)] bg-opacity-50 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="bg-[var(--white)] px-8 py-6 rounded-xl shadow-2xl text-center max-w-sm w-full">
@@ -1264,7 +1266,9 @@
               class="w-full bg-gradient-to-r from-[var(--purple-600)] to-[var(--purple-500)] text-[var(--white)] py-3 rounded hover:from-[var(--purple-700)] transition duration-300">
               Nhận Ebook miễn phí
             </button>
-  
+            <div id="loadingSpinnerEbook" class="hidden flex justify-center">
+              <div class="animate-spin rounded-full h-8 w-8 border-t-4 border-[var(--purple-600)] border-opacity-30"></div>
+            </div>
             <!-- Toast -->
             <p id="toastEbookEbook"
               class="text-[var(--green-600)] text-center opacity-0 pointer-events-none transition-opacity duration-500">
@@ -1292,6 +1296,46 @@
   </footer>
   </section>
   <script src="js/script.js"></script>
+  <script>
+    const formEbook = document.getElementById('contactFormEbook');
+    const loadingEbook = document.getElementById('loadingSpinnerEbook');
+    const toastEbook = document.getElementById('toastEbookEbook');
+  
+    formEbook.addEventListener('submit', function (e) {
+      loadingEbook.classList.remove('hidden'); // hiện spinner
+  
+      // Đợi form xử lý (vì form gửi đến Google Script)
+      setTimeout(() => {
+        loadingEbook.classList.add('hidden'); // ẩn spinner
+        toastEbook.classList.remove('opacity-0', 'pointer-events-none');
+        toastEbook.classList.add('opacity-100');
+      }, 3000); // có thể tùy chỉnh delay theo thực tế (3s ở đây là ví dụ)
+    });
+  </script>
+  <script>
+    const formService = document.getElementById('contactForm');
+    const loadingService = document.getElementById('loadingSpinner');
+    const toastService = document.getElementById('toast');
+  
+    formService.addEventListener('submit', function (e) {
+      // Hiển thị loading
+      loadingService.classList.remove('hidden');
+  
+      // Ẩn form để tránh người dùng bấm nhiều lần (tuỳ chọn)
+      formService.querySelector('button[type="submit"]').disabled = true;
+  
+      // Mô phỏng xử lý (Google Script xử lý ngầm), nên delay hiển thị toast
+      setTimeout(() => {
+        loadingService.classList.add('hidden');
+        toastService.classList.remove('opacity-0', 'pointer-events-none');
+        toastService.classList.add('opacity-100');
+  
+        // Bật lại submit nếu cần
+        formService.querySelector('button[type="submit"]').disabled = false;
+      }, 3000); // Thời gian delay tuỳ ý, 3s là hợp lý
+    });
+  </script>
+  
 </body>
 
 </html>
