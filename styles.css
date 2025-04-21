@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Thiết lập tỷ lệ cho hình ảnh (aspect-ratio 1:1) */
+.slider-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1; /* Đảm bảo chiều cao = chiều rộng */
+  object-fit: cover; /* Đảm bảo ảnh được cắt xén để phù hợp */
+  transition: transform 0.3s ease;
+}
+
+/* Điều chỉnh các phần tử trong slider */
+@media (max-width: 1024px) {
+  .slider-item {
+    min-width: 60%; /* Thu nhỏ một chút ở các màn hình tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-item {
+    min-width: 80%; /* Thu nhỏ hơn nữa trên màn hình nhỏ */
+  }
+
+  /* Đặt lại slider thành dạng cột khi ở màn hình điện thoại */
+  #sliderProducts {
+    flex-direction: column;
+    align-items: center; /* Center align items */
+  }
+
+  .min-w-[85%],
+  .sm\:min-w-[45%],
+  .md\:min-w-[33.3333%] {
+    min-width: 100%; /* Đảm bảo mỗi item chiếm full chiều rộng trên mobile */
+    margin-bottom: 16px; /* Thêm khoảng cách giữa các item */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item {
+    min-width: 100%; /* Đảm bảo full chiều rộng trên màn hình điện thoại */
+  }
+}
+
+@media (min-width: 769px) {
+  #slider {
+    flex-direction: row; /* Thiết lập layout ngang trên desktop */
+    align-items: flex-start; /* Align các item về phía đầu */
+  }
+
+  .slider-item {
+    min-width: 33.3333%; /* Đảm bảo 3 item mỗi hàng trên desktop */
+  }
+}
+
+#header {
+  transition: transform 0.3s ease-in-out;
+  position: fixed; /* hoặc sticky tùy bạn */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+html, body {
+  overflow-x: hidden; /* Ngăn cuộn ngang */
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+iframe,
+img,
+section,
+.w-full {
+  max-width: 100%;
+}
+
+/* Tránh ảnh / iframe bị tràn */
+iframe {
+  display: block;
+}
+
+:root {
+  /* ==== BRANDING COLOR ==== */
+  --main-pink: #D69ADE;             /* Màu chính của thương hiệu, dùng cho tiêu đề, nút chính */
+  --hover-pink: #D08DFF;            /* Màu khi hover nút hoặc các phần tử chính */
+  --highlight-pink: #EEBFD1;        /* Màu làm nền nổi bật (ví dụ section mở đầu, lộ trình) */
+  --deep-pink: #DABBE0;             /* Màu nhấn mạnh hơn, dùng ở nền section đặc biệt */
+
+  /* ==== TEXT COLOR ==== */
+  --text-purple: #A678F8;           /* Dùng cho tiêu đề phụ và đoạn văn cần nổi bật */
+  --gray-800: #1f2937;              /* Màu chữ chính, đảm bảo độ tương phản tốt */
+  --gray-700: #374151;              /* Màu chữ phụ hoặc heading nhẹ */
+  --gray-600: #6b7280;              /* Màu nội dung ít nổi bật hơn */
+  --gray-300: #d1d5db;              /* Màu viền input hoặc border nhạt */
+  --gray-50: #f9fafb;               /* Màu nền cực nhẹ, thường dùng cho section nền trắng mềm */
+
+  /* ==== BACKGROUND GRADIENT ==== */
+  --form-gradient-from: #ECAAC2;         /* Dùng làm màu bắt đầu gradient cho form đăng ký */
+  --ebook-gradient-from: #EFD9FA;        /* Màu khởi đầu của gradient form ebook */
+
+  /* ==== WHITE & BLACK ==== */
+  --white: #ffffff;                /* Nền trắng hoặc text trắng */
+  --black: #000000;                /* Text nền tối hoặc dùng ở overlay */
+
+  /* ==== TONE PHỤ (Accent Colors) ==== */
+  --accent-purple: #93AECA;             /* Accent phụ khi hover nút hoặc background nổi bật */
+  --accent-purple-hover: #BED1E3;       /* Phiên bản hover của accent-purple */
+
+  /* ==== TONE HỒNG / TÍM DỰ PHÒNG (Tailwind style extended) ==== */
+  --pink-50: #fdf2f8;              /* Nền siêu nhẹ, dùng cho các khối nổi bật nhẹ */
+  --pink-300: #FFEDFA;             /* Màu nền nhẹ của các section cần nổi bật */
+  --pink-500: #ec4899;             /* Dùng cho border, nút dạng gradient */
+  --pink-600: #db2777;             /* Nút hoặc chữ chính dạng gradient */
+  --pink-700: #be185d;             /* Hover mạnh của pink-600 */
+
+  --purple-50: #faf5ff;            /* Background section cực nhẹ */
+  --purple-100: #f3e8ff;           /* Gradient nhẹ, làm form nền dễ nhìn */
+  --purple-500: #a855f7;           /* Dùng cho border hoặc hover màu tím */
+  --purple-600: #9333ea;           /* Tiêu đề lớn hoặc nhấn mạnh */
+  --purple-700: #7e22ce;           /* Tím đậm cho chữ hoặc hover */
+
+  /* ==== VÀNG – ĐÁNH GIÁ (Sao đánh giá, nhấn mạnh giá trị) ==== */
+  --yellow-100: #fef3c7;           /* Nền nhẹ của thông báo */
+  --yellow-400: #facc15;           /* Màu sao đánh giá vàng nhẹ */
+  --yellow-500: #eab308;           /* Sao đánh giá vàng đậm hơn */
+
+  /* ==== XANH LÁ – THÔNG BÁO THÀNH CÔNG ==== */
+  --green-600: #16a34a;            /* Màu thông báo success (ví dụ toast thành công) */
+
+  /* ==== XANH DƯƠNG – LINK & CTA NHẸ ==== */
+  --blue-500: #B7B1F2;             /* Màu hover link hoặc chữ CTA */
+  --blue-900: #8E7DBE;             /* Text chính cho menu header */
+}
